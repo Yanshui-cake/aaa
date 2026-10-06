@@ -7,6 +7,7 @@
     <title>蘭潭圖書館服務指南</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -21,6 +22,7 @@
             background: #f4f7fb;
             color: #263238;
         }
+
 
         /* =========================
            Header
@@ -45,6 +47,7 @@
             letter-spacing: 2px;
         }
 
+
         /* =========================
            Main
         ========================= */
@@ -60,6 +63,7 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
+
 
         /* =========================
            Cards
@@ -97,6 +101,7 @@
             color: #1f4f7a;
         }
 
+
         /* =========================
            Modal
         ========================= */
@@ -130,6 +135,7 @@
         }
 
         @keyframes modalShow {
+
             from {
                 transform: translateY(15px);
                 opacity: 0;
@@ -165,6 +171,7 @@
             color: #777;
             margin-bottom: 25px;
         }
+
 
         /* =========================
            Option Blocks
@@ -212,6 +219,7 @@
             line-height: 1.6;
         }
 
+
         /* =========================
            Developing
         ========================= */
@@ -236,6 +244,7 @@
             color: #777;
             line-height: 1.8;
         }
+
 
         /* =========================
            Information Services
@@ -276,6 +285,7 @@
             background: #163a5c;
             transform: translateY(-1px);
         }
+
 
         /* =========================
            AI Chat
@@ -354,6 +364,7 @@
             background: #163a5c;
         }
 
+
         /* =========================
            Footer
         ========================= */
@@ -363,7 +374,7 @@
             color: white;
             margin-top: 60px;
             padding: 35px 20px;
-            text-align: center;
+            text-align: left;
         }
 
         footer h3 {
@@ -395,6 +406,7 @@
             background: #eef4f8;
         }
 
+
         /* =========================
            Responsive
         ========================= */
@@ -414,6 +426,7 @@
                 padding: 25px;
             }
         }
+
 
         @media (max-width: 520px) {
 
@@ -483,16 +496,21 @@
                 font-size: 14px;
             }
         }
+
     </style>
+
 </head>
 
+
 <body>
+
 
     <!-- =========================
          Header
     ========================= -->
 
     <header>
+
         <div class="school-name">
             📚 嘉義大學｜蘭潭圖書館
         </div>
@@ -500,7 +518,9 @@
         <h1>
             蘭潭圖書館服務指南
         </h1>
+
     </header>
+
 
 
     <!-- =========================
@@ -511,19 +531,30 @@
 
         <div class="card-grid">
 
+
             <!-- 1. 館藏與閱讀資源 -->
+
             <div
                 class="card"
                 onclick="openCollection()"
                 tabindex="0"
                 onkeydown="cardKey(event, openCollection)"
             >
-                <div class="icon">📚</div>
-                <h3>館藏與閱讀資源</h3>
+
+                <div class="icon">
+                    📚
+                </div>
+
+                <h3>
+                    館藏與閱讀資源
+                </h3>
+
             </div>
 
 
+
             <!-- 2. 學習與自修空間 -->
+
             <div
                 class="card"
                 onclick="openDeveloping(
@@ -538,61 +569,106 @@
                     )
                 )"
             >
-                <div class="icon">📖</div>
-                <h3>學習與自修空間</h3>
+
+                <div class="icon">
+                    📖
+                </div>
+
+                <h3>
+                    學習與自修空間
+                </h3>
+
             </div>
 
 
+
             <!-- 3. 視聽與會議設施 -->
+
             <div
                 class="card"
                 onclick="openAudioMeeting()"
                 tabindex="0"
                 onkeydown="cardKey(event, openAudioMeeting)"
             >
-                <div class="icon">🎬</div>
-                <h3>視聽與會議設施</h3>
+
+                <div class="icon">
+                    🎬
+                </div>
+
+                <h3>
+                    視聽與會議設施
+                </h3>
+
             </div>
 
 
+
             <!-- 4. 藝文展覽功能 -->
+
             <div
                 class="card"
                 onclick="openArt()"
                 tabindex="0"
                 onkeydown="cardKey(event, openArt)"
             >
-                <div class="icon">🎨</div>
-                <h3>藝文展覽功能</h3>
+
+                <div class="icon">
+                    🎨
+                </div>
+
+                <h3>
+                    藝文展覽功能
+                </h3>
+
             </div>
 
 
+
             <!-- 5. 資訊與技術支援 -->
+
             <div
                 class="card"
                 onclick="openInformationServices()"
                 tabindex="0"
                 onkeydown="cardKey(event, openInformationServices)"
             >
-                <div class="icon">💻</div>
-                <h3>資訊與技術支援</h3>
+
+                <div class="icon">
+                    💻
+                </div>
+
+                <h3>
+                    資訊與技術支援
+                </h3>
+
             </div>
 
 
-            <!-- 6. AI -->
+
+            <!-- 6. AI 小幫手 -->
+
             <div
                 class="card"
                 onclick="openAI()"
                 tabindex="0"
                 onkeydown="cardKey(event, openAI)"
             >
-                <div class="icon">🤖</div>
-                <h3>圖書館 AI 小幫手</h3>
+
+                <div class="icon">
+                    🤖
+                </div>
+
+                <h3>
+                    圖書館 AI 小幫手
+                </h3>
+
             </div>
+
 
         </div>
 
     </main>
+
 
 
     <!-- =========================
@@ -631,6 +707,7 @@
     </div>
 
 
+
     <!-- =========================
          Footer
     ========================= -->
@@ -662,6 +739,7 @@
 
         </div>
 
+
         <a
             class="library-home-button"
             href="https://website.ncyu.edu.tw/lib/"
@@ -673,16 +751,26 @@
     </footer>
 
 
+
     <!-- =========================
          JavaScript
     ========================= -->
 
     <script>
 
-        const modal = document.getElementById("infoModal");
-        const modalTitle = document.getElementById("modalTitle");
-        const modalSubtitle = document.getElementById("modalSubtitle");
-        const modalBody = document.getElementById("modalBody");
+
+        const modal =
+            document.getElementById("infoModal");
+
+        const modalTitle =
+            document.getElementById("modalTitle");
+
+        const modalSubtitle =
+            document.getElementById("modalSubtitle");
+
+        const modalBody =
+            document.getElementById("modalBody");
+
 
 
         /* =========================
@@ -691,29 +779,38 @@
 
         function cardKey(event, callback) {
 
-            if (event.key === "Enter" || event.key === " ") {
+            if (
+                event.key === "Enter" ||
+                event.key === " "
+            ) {
 
                 event.preventDefault();
 
                 callback();
+
             }
+
         }
 
 
+
         /* =========================
-           Open Collection
+           館藏與閱讀資源
         ========================= */
 
         function openCollection() {
 
-            modalTitle.textContent = "📚 館藏與閱讀資源";
+            modalTitle.textContent =
+                "📚 館藏與閱讀資源";
 
             modalSubtitle.textContent =
                 "查找圖書館館藏與電子閱讀資源";
 
+
             modalBody.innerHTML = `
 
                 <div class="option-list">
+
 
                     <a
                         class="option-block"
@@ -741,6 +838,7 @@
                     </a>
 
 
+
                     <a
                         class="option-block"
                         href="https://website.ncyu.edu.tw/lib/Subject?nodeId=44461"
@@ -765,22 +863,30 @@
 
                     </a>
 
+
                 </div>
+
             `;
 
+
             modal.classList.add("show");
+
         }
 
 
+
         /* =========================
-           Developing
+           學習與自修空間
         ========================= */
 
         function openDeveloping(title, subtitle) {
 
-            modalTitle.textContent = title;
+            modalTitle.textContent =
+                title;
 
-            modalSubtitle.textContent = subtitle;
+            modalSubtitle.textContent =
+                subtitle;
+
 
             modalBody.innerHTML = `
 
@@ -800,14 +906,18 @@
                     </p>
 
                 </div>
+
             `;
 
+
             modal.classList.add("show");
+
         }
 
 
+
         /* =========================
-           Audio / Meeting
+           視聽與會議設施
         ========================= */
 
         function openAudioMeeting() {
@@ -818,9 +928,11 @@
             modalSubtitle.textContent =
                 "視聽空間與相關館藏資訊";
 
+
             modalBody.innerHTML = `
 
                 <div class="option-list">
+
 
                     <a
                         class="option-block"
@@ -845,6 +957,7 @@
                         </div>
 
                     </a>
+
 
 
                     <div
@@ -873,15 +986,20 @@
 
                     </div>
 
+
                 </div>
+
             `;
 
+
             modal.classList.add("show");
+
         }
 
 
+
         /* =========================
-           Art / Exhibition
+           藝文展覽功能
         ========================= */
 
         function openArt() {
@@ -892,9 +1010,11 @@
             modalSubtitle.textContent =
                 "嘉大蘭潭圖書館藝文與相關資訊";
 
+
             modalBody.innerHTML = `
 
                 <div class="option-list">
+
 
                     <!-- 新聞剪報 -->
 
@@ -923,7 +1043,8 @@
                     </a>
 
 
-                    <!-- 郭東榮 -->
+
+                    <!-- 郭東榮作品展 -->
 
                     <a
                         class="option-block"
@@ -950,7 +1071,8 @@
                     </a>
 
 
-                    <!-- 蕭萬長 -->
+
+                    <!-- 蕭萬長文物館 -->
 
                     <a
                         class="option-block"
@@ -977,7 +1099,8 @@
                     </a>
 
 
-                    <!-- 混沌圓成 -->
+
+                    <!-- 混沌&圓成 -->
 
                     <a
                         class="option-block"
@@ -1003,15 +1126,20 @@
 
                     </a>
 
+
                 </div>
+
             `;
 
+
             modal.classList.add("show");
+
         }
 
 
+
         /* =========================
-           Information Services
+           資訊與技術支援
         ========================= */
 
         function openInformationServices() {
@@ -1022,9 +1150,11 @@
             modalSubtitle.textContent =
                 "嘉大蘭潭圖書館資訊服務";
 
+
             modalBody.innerHTML = `
 
                 <div class="info-content">
+
 
                     <p>
                         嘉大蘭潭圖書館提供多項資訊服務，
@@ -1032,7 +1162,9 @@
                     </p>
 
 
+
                     <br>
+
 
 
                     <strong>
@@ -1041,11 +1173,14 @@
 
                     <p>
                         館內提供網路及電腦設備，
-                        方便學生進行資料查詢、網路學習與研究工作。
+                        方便學生進行資料查詢、
+                        網路學習與研究工作。
                     </p>
 
 
+
                     <br>
+
 
 
                     <strong>
@@ -1059,7 +1194,9 @@
                     </p>
 
 
+
                     <br>
+
 
 
                     <strong>
@@ -1072,6 +1209,7 @@
                     </p>
 
 
+
                     <a
                         class="info-button"
                         href="https://libproxy.ncyu.edu.tw/er/search/?query_term=&query_field=ti&query_op=&match_type=phrase&filter_bool=and&filter_term=DB&filter_field=type.raw&filter_op=term&hot_days=30"
@@ -1081,7 +1219,9 @@
                     </a>
 
 
+
                     <br><br>
+
 
 
                     <strong>
@@ -1090,11 +1230,14 @@
 
                     <p>
                         館內一樓提供列印、影印及掃描設備，
-                        方便學生處理課程資料、報告及其他學習文件。
+                        方便學生處理課程資料、
+                        報告及其他學習文件。
                     </p>
 
 
+
                     <br>
+
 
 
                     <strong>
@@ -1109,6 +1252,7 @@
                     </p>
 
 
+
                     <a
                         class="info-button"
                         href="https://www.ncyu.edu.tw/lib/Contents?nodeId=62867"
@@ -1118,7 +1262,9 @@
                     </a>
 
 
+
                     <br><br>
+
 
 
                     <strong>
@@ -1132,15 +1278,20 @@
                         取得相關資源與檢索指引。
                     </p>
 
+
                 </div>
+
             `;
 
+
             modal.classList.add("show");
+
         }
 
 
+
         /* =========================
-           AI Assistant
+           AI 小幫手
         ========================= */
 
         function openAI() {
@@ -1151,14 +1302,17 @@
             modalSubtitle.textContent =
                 "有關圖書館服務的問題都可以問問看";
 
+
             modalBody.innerHTML = `
 
                 <div class="ai-chat">
+
 
                     <div
                         class="ai-messages"
                         id="aiMessages"
                     >
+
 
                         <div class="message bot">
 
@@ -1171,23 +1325,40 @@
                                 你可以問我：
 
                                 <br>
+
                                 • 哪裡可以找書？
+
                                 <br>
+
                                 • 圖書館有電子書嗎？
+
                                 <br>
+
                                 • 哪裡可以印東西？
+
                                 <br>
+
                                 • 會議室怎麼預約？
+
                                 <br>
+
                                 • 圖書館有什麼展覽？
+
                                 <br>
+
                                 • 有電腦或 Wi-Fi 嗎？
+
+                                <br>
+
+                                • 有線上影音嗎？
 
                             </div>
 
                         </div>
 
+
                     </div>
+
 
 
                     <div class="ai-input-area">
@@ -1200,6 +1371,7 @@
                             onkeydown="handleAIEnter(event)"
                         >
 
+
                         <button
                             class="ai-send"
                             onclick="askAI()"
@@ -1209,10 +1381,14 @@
 
                     </div>
 
+
                 </div>
+
             `;
 
+
             modal.classList.add("show");
+
 
             setTimeout(() => {
 
@@ -1220,11 +1396,15 @@
                     document.getElementById("aiInput");
 
                 if (input) {
+
                     input.focus();
+
                 }
 
             }, 100);
+
         }
+
 
 
         /* =========================
@@ -1238,8 +1418,11 @@
                 event.preventDefault();
 
                 askAI();
+
             }
+
         }
+
 
 
         /* =========================
@@ -1254,16 +1437,24 @@
             const messages =
                 document.getElementById("aiMessages");
 
+
             if (!input || !messages) {
+
                 return;
+
             }
+
 
             const question =
                 input.value.trim();
 
+
             if (question === "") {
+
                 return;
+
             }
+
 
 
             /* 使用者訊息 */
@@ -1274,11 +1465,15 @@
             userMessage.className =
                 "message user";
 
+
             userMessage.innerHTML = `
+
                 <div class="bubble">
                     ${escapeHTML(question)}
                 </div>
+
             `;
+
 
             messages.appendChild(userMessage);
 
@@ -1286,10 +1481,12 @@
             input.value = "";
 
 
+
             /* AI 回覆 */
 
             const answer =
                 getAIAnswer(question);
+
 
             const botMessage =
                 document.createElement("div");
@@ -1297,18 +1494,24 @@
             botMessage.className =
                 "message bot";
 
+
             botMessage.innerHTML = `
+
                 <div class="bubble">
                     ${answer}
                 </div>
+
             `;
+
 
             messages.appendChild(botMessage);
 
 
             messages.scrollTop =
                 messages.scrollHeight;
+
         }
+
 
 
         /* =========================
@@ -1321,6 +1524,7 @@
                 question.toLowerCase();
 
 
+
             /* 自習 */
 
             if (
@@ -1331,14 +1535,18 @@
             ) {
 
                 return `
+
                     📖 圖書館有學習與自修空間。
 
                     <br><br>
 
                     目前網站尚未連接即時座位系統，
                     所以我無法確認現在是否還有空位。
+
                 `;
+
             }
+
 
 
             /* 找書 */
@@ -1351,15 +1559,20 @@
             ) {
 
                 return `
+
                     📚 你可以使用「館藏查詢」功能
-                    搜尋圖書館的書籍、期刊及其他館藏資料。
+                    搜尋圖書館的書籍、
+                    期刊及其他館藏資料。
 
                     <br><br>
 
                     請回到首頁點選
                     「館藏與閱讀資源」。
+
                 `;
+
             }
+
 
 
             /* 電子書 */
@@ -1371,6 +1584,7 @@
             ) {
 
                 return `
+
                     📱 圖書館提供電子書與電子資源。
 
                     <br><br>
@@ -1383,8 +1597,11 @@
 
                     如果要查詢電子資料庫，
                     可以到「資訊與技術支援」。
+
                 `;
+
             }
+
 
 
             /* 列印 */
@@ -1396,10 +1613,14 @@
             ) {
 
                 return `
+
                     🖨️ 圖書館一樓提供
                     列印、影印與掃描設備。
+
                 `;
+
             }
+
 
 
             /* 會議室 */
@@ -1411,6 +1632,7 @@
             ) {
 
                 return `
+
                     🎬 你可以使用
                     「視聽與會議設施」功能。
 
@@ -1419,8 +1641,11 @@
                     裡面有
                     「視聽團體室、會議室預約」
                     的連結。
+
                 `;
+
             }
+
 
 
             /* 電腦 / 網路 */
@@ -1433,11 +1658,15 @@
             ) {
 
                 return `
+
                     🌐 圖書館提供網路與電腦相關資訊服務，
                     可以協助學生進行資料查詢、
                     網路學習與研究工作。
+
                 `;
+
             }
+
 
 
             /* 展覽 */
@@ -1449,8 +1678,9 @@
             ) {
 
                 return `
+
                     🎨 你可以點選首頁的
-                    「藝文展覽功能」，
+                    「藝文展覽功能」。
 
                     <br><br>
 
@@ -1458,8 +1688,11 @@
                     郭東榮作品展、
                     蕭萬長文物館以及
                     混沌&圓成展覽等資訊。
+
                 `;
+
             }
+
 
 
             /* 開放時間 */
@@ -1471,11 +1704,15 @@
             ) {
 
                 return `
+
                     🕐 關於圖書館最新開放時間，
                     建議查看嘉義大學圖書館官方網站
                     的最新公告。
+
                 `;
+
             }
+
 
 
             /* 線上影音 */
@@ -1487,6 +1724,7 @@
             ) {
 
                 return `
+
                     🎬 圖書館有線上影音公播平台。
 
                     <br><br>
@@ -1495,36 +1733,55 @@
                     「資訊與技術支援」，
                     點選「線上影音公播平台」
                     查看相關資訊。
+
                 `;
+
             }
+
 
 
             /* Default */
 
             return `
+
                 🤖 我目前可以協助你了解：
 
                 <br><br>
 
                 📚 館藏查詢
+
                 <br>
+
                 📱 電子書
+
                 <br>
+
                 🖨️ 列印、影印與掃描
+
                 <br>
+
                 🎬 會議室與團體室
+
                 <br>
+
                 🎨 藝文展覽
+
                 <br>
+
                 💻 電腦與網路
+
                 <br>
+
                 🎞️ 線上影音
 
                 <br><br>
 
                 你可以直接輸入想知道的服務。
+
             `;
+
         }
+
 
 
         /* =========================
@@ -1539,7 +1796,9 @@
             div.textContent = text;
 
             return div.innerHTML;
+
         }
+
 
 
         /* =========================
@@ -1549,7 +1808,9 @@
         function closeInfo() {
 
             modal.classList.remove("show");
+
         }
+
 
 
         function closeModalOutside(event) {
@@ -1557,8 +1818,11 @@
             if (event.target === modal) {
 
                 closeInfo();
+
             }
+
         }
+
 
 
         /* =========================
@@ -1572,6 +1836,7 @@
                 if (event.key === "Escape") {
 
                     closeInfo();
+
                 }
 
             }
