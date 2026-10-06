@@ -546,26 +546,7 @@
 
         <div class="card-grid">
 
-            <!-- 1. 藝文展覽功能 -->
-            <div
-                class="card"
-                onclick="openArt()"
-                tabindex="0"
-                onkeydown="cardKey(event, openArt)"
-            >
-
-                <div class="icon">
-                    🎨
-                </div>
-
-                <h3>
-                    藝文展覽功能
-                </h3>
-
-            </div>
-
-
-            <!-- 2. 館藏與閱讀資源 -->
+            <!-- 1. 館藏與閱讀資源 -->
             <div
                 class="card"
                 onclick="openCollection()"
@@ -579,6 +560,33 @@
 
                 <h3>
                     館藏與閱讀資源
+                </h3>
+
+            </div>
+
+
+            <!-- 2. 學習與自修空間 -->
+            <div
+                class="card"
+                onclick="openDeveloping(
+                    '📖 學習與自修空間',
+                    '自修空間相關功能'
+                )"
+                tabindex="0"
+                onkeydown="cardKey(event, () =>
+                    openDeveloping(
+                        '📖 學習與自修空間',
+                        '自修空間相關功能'
+                    )
+                )"
+            >
+
+                <div class="icon">
+                    📖
+                </div>
+
+                <h3>
+                    學習與自修空間
                 </h3>
 
             </div>
@@ -603,28 +611,20 @@
             </div>
 
 
-            <!-- 4. 學習與自修空間 -->
+            <!-- 4. 藝文展覽功能 -->
             <div
                 class="card"
-                onclick="openDeveloping(
-                    '📖 學習與自修空間',
-                    '自修空間相關功能'
-                )"
+                onclick="openArt()"
                 tabindex="0"
-                onkeydown="cardKey(event, () =>
-                    openDeveloping(
-                        '📖 學習與自修空間',
-                        '自修空間相關功能'
-                    )
-                )"
+                onkeydown="cardKey(event, openArt)"
             >
 
                 <div class="icon">
-                    📖
+                    🎨
                 </div>
 
                 <h3>
-                    學習與自修空間
+                    藝文展覽功能
                 </h3>
 
             </div>
