@@ -1,508 +1,586 @@
-```html
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="國立嘉義大學蘭潭圖書館學生服務指南，快速查詢館藏、閱覽空間、視聽設施、藝文展覽及資訊服務。">
-<title>嘉義大學蘭潭圖書館｜六大功能指南</title>
+
+<title>嘉義大學蘭潭圖書館｜學生服務指南</title>
 
 <style>
-:root {
-  --navy: #17365d;
-  --blue: #2d6cdf;
-  --light: #f5f8fc;
-  --text: #243447;
-  --muted: #6b7785;
-  --card: #fff;
+
+:root{
+  --navy:#17365d;
+  --blue:#2d6cdf;
+  --light:#f5f8fc;
+  --text:#243447;
+  --muted:#6b7785;
+  --card:#ffffff;
 }
 
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, "Noto Sans TC", sans-serif;
-  background: var(--light);
-  color: var(--text);
+*{
+  box-sizing:border-box;
 }
 
-header {
-  background: linear-gradient(135deg, #17365d, #2d6cdf);
-  color: #fff;
-  padding: 38px 20px 55px;
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;
+  background:var(--light);
+  color:var(--text);
 }
 
-.wrap {
-  max-width: 1050px;
-  margin: auto;
+
+/* ===== Header ===== */
+
+header{
+  background:linear-gradient(135deg,#17365d,#2d6cdf);
+  color:#fff;
+  padding:38px 20px 55px;
 }
 
-.top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+.wrap{
+  max-width:1050px;
+  margin:auto;
 }
 
-.logo {
-  font-size: 20px;
-  font-weight: 800;
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
 }
 
-.badge {
-  background: #ffffff22;
-  border: 1px solid #ffffff55;
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-size: 13px;
+.logo{
+  font-size:20px;
+  font-weight:800;
 }
 
-h1 {
-  font-size: clamp(30px, 5vw, 50px);
-  margin: 35px 0 10px;
-  line-height: 1.15;
+.badge{
+  background:#ffffff22;
+  border:1px solid #ffffff55;
+  padding:8px 12px;
+  border-radius:999px;
+  font-size:13px;
 }
 
-.hero p {
-  margin: 0;
-  opacity: .9;
-  font-size: 17px;
+.hero{
+  margin-top:35px;
 }
 
-.search {
-  margin: -28px auto 25px;
-  position: relative;
-  max-width: 850px;
+h1{
+  font-size:clamp(30px,5vw,50px);
+  margin:0 0 10px;
+  line-height:1.15;
 }
 
-.search input {
-  width: 100%;
-  padding: 19px 52px 19px 22px;
-  border: 0;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px #17365d22;
-  font-size: 16px;
-  outline: none;
+.hero p{
+  margin:0;
+  opacity:.9;
+  font-size:17px;
 }
 
-.search span {
-  position: absolute;
-  right: 18px;
-  top: 14px;
-  font-size: 25px;
+
+/* ===== Main ===== */
+
+main{
+  padding-bottom:40px;
 }
 
-section { padding: 18px 0 35px; }
-
-h2 {
-  font-size: 24px;
-  margin: 15px 0;
+section{
+  padding:35px 0;
 }
 
-.sub {
-  color: var(--muted);
-  margin-top: -8px;
-  line-height: 1.7;
+h2{
+  font-size:28px;
+  margin:15px 0 8px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+.sub{
+  color:var(--muted);
+  margin-top:0;
+  margin-bottom:25px;
 }
 
-.card {
-  background: var(--card);
-  border-radius: 18px;
-  padding: 22px;
-  box-shadow: 0 5px 18px #17365d12;
-  border: 1px solid #e7edf5;
-  cursor: pointer;
-  transition: .2s;
+
+/* ===== Cards ===== */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
 }
 
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px #17365d18;
+.card{
+  background:var(--card);
+  border-radius:18px;
+  padding:24px;
+  box-shadow:0 5px 18px #17365d12;
+  border:1px solid #e7edf5;
+  cursor:pointer;
+  transition:.2s;
 }
 
-.card:focus-visible {
-  outline: 3px solid var(--blue);
-  outline-offset: 3px;
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 24px #17365d18;
 }
 
-.icon { font-size: 32px; }
-
-.card h3 { margin: 12px 0 7px; }
-
-.card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.7;
+.card:focus{
+  outline:3px solid #2d6cdf55;
 }
 
-.feature {
-  display: grid;
-  grid-template-columns: 1.3fr .7fr;
-  gap: 18px;
+.icon{
+  font-size:36px;
 }
 
-.panel, .qrbox {
-  background: #fff;
-  border-radius: 18px;
-  padding: 24px;
-  border: 1px solid #e7edf5;
+.card h3{
+  margin:14px 0 8px;
+  font-size:20px;
 }
 
-.status {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 14px 0;
-  border-bottom: 1px solid #edf1f5;
+.card p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
 }
 
-.green {
-  color: #16834b;
-  font-weight: 700;
+
+/* ===== Modal ===== */
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#0008;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  z-index:10;
 }
 
-.yellow {
-  color: #ad7200;
-  font-weight: 700;
+.modal.show{
+  display:flex;
 }
 
-.qrbox {
-  text-align: center;
+.modalbox{
+  background:#fff;
+  border-radius:20px;
+  max-width:600px;
+  width:100%;
+  padding:28px;
+  max-height:85vh;
+  overflow:auto;
+  box-shadow:0 15px 50px #0004;
 }
 
-.qrbox img {
-  width: 190px;
-  height: 190px;
-  max-width: 100%;
+.close{
+  float:right;
+  border:0;
+  background:#eef3f8;
+  border-radius:50%;
+  width:36px;
+  height:36px;
+  font-size:20px;
+  cursor:pointer;
 }
 
-.url {
-  font-size: 12px;
-  color: var(--muted);
-  word-break: break-all;
-  margin-top: 10px;
+.close:hover{
+  background:#dfe7f0;
 }
 
-footer {
-  text-align: center;
-  padding: 35px 20px;
-  color: var(--muted);
-  font-size: 13px;
+.modalbox h2{
+  margin-top:5px;
+  padding-right:45px;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: #0008;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  z-index: 10;
+.modal-sub{
+  color:var(--blue);
+  font-weight:700;
+  margin-bottom:18px;
 }
 
-.modal.show { display: flex; }
-
-.modalbox {
-  background: #fff;
-  border-radius: 20px;
-  max-width: 600px;
-  width: 100%;
-  padding: 26px;
-  max-height: 85vh;
-  overflow: auto;
+.modal-text{
+  white-space:pre-line;
+  line-height:1.8;
+  color:var(--text);
 }
 
-.close {
-  float: right;
-  border: 0;
-  background: #eef3f8;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  font-size: 20px;
-  cursor: pointer;
-}
 
-.modalbox p {
-  line-height: 1.9;
-  white-space: pre-line;
-}
+/* ===== 手機版 ===== */
 
-.result {
-  padding: 12px;
-  border-radius: 12px;
-  background: #f5f8fc;
-  margin-top: 10px;
-  line-height: 1.8;
-}
+@media(max-width:800px){
 
-.btn {
-  display: inline-block;
-  border: 0;
-  border-radius: 10px;
-  background: var(--blue);
-  color: #fff;
-  padding: 11px 16px;
-  margin-top: 12px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.btn:hover { background: var(--navy); }
-
-.empty {
-  display: none;
-  text-align: center;
-  padding: 30px;
-  color: var(--muted);
-  background: #fff;
-  border-radius: 16px;
-}
-
-@media(max-width:800px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
-  .feature { grid-template-columns: 1fr; }
-}
-
-@media(max-width:520px) {
-  .grid { grid-template-columns: 1fr; }
-  .top {
-    align-items: flex-start;
-    flex-direction: column;
+  .grid{
+    grid-template-columns:repeat(2,1fr);
   }
-  .status { font-size: 14px; }
+
 }
+
+@media(max-width:520px){
+
+  header{
+    padding:30px 18px 45px;
+  }
+
+  .top{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .hero{
+    margin-top:28px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:25px 18px 35px;
+  }
+
+  h2{
+    font-size:24px;
+  }
+
+}
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- ===== Header ===== -->
+
 <header>
+
   <div class="wrap">
+
     <div class="top">
-      <div class="logo">📚 嘉義大學｜蘭潭圖書館</div>
-      <div class="badge">六大功能指南</div>
+
+      <div class="logo">
+        📚 嘉義大學｜蘭潭圖書館
+      </div>
+
+      <div class="badge">
+        學生服務指南
+      </div>
+
     </div>
 
+
     <div class="hero">
-      <h1>探索蘭潭圖書館</h1>
-      <p>從閱讀、自修到研究與藝文活動，快速找到你需要的圖書館資源。</p>
+
+      <h1>
+        你想找什麼？
+      </h1>
+
+      <p>
+        選擇你需要的功能，快速了解蘭潭圖書館提供的服務。
+      </p>
+
     </div>
+
   </div>
+
 </header>
+
+
+
+<!-- ===== Main ===== -->
 
 <main class="wrap">
 
-  <div class="search">
-    <input
-      id="search"
-      type="search"
-      placeholder="搜尋功能，例如：電子期刊、B1、演講廳、列印……"
-      aria-label="搜尋圖書館功能"
-      oninput="searchCards()">
-    <span aria-hidden="true">🔍</span>
-  </div>
-
   <section>
-    <h2>圖書館六大功能</h2>
-    <p class="sub">點選功能卡片，查看服務介紹與使用方向。</p>
+
+    <h2>
+      蘭潭圖書館六大功能
+    </h2>
+
+    <p class="sub">
+      點選功能卡片，查看詳細服務介紹。
+    </p>
+
 
     <div class="grid" id="cards">
 
-      <div class="card" tabindex="0"
-        data-key="館藏 閱讀 資源 書籍 期刊 電子資源 電子書 STEM 理工 農學 自然科學 輕鬆閱讀 報紙 休閒書刊"
-        onclick="openInfo('📚 館藏與閱讀資源','豐富的閱讀與研究資料',
-        '蘭潭圖書館提供實體書籍、期刊與電子資源，館藏重點涵蓋理工、農學及自然科學等 STEM 領域。\\n\\n一樓設有輕鬆閱讀區，提供舒適沙發、報紙及休閒書刊，適合課餘閱讀與休息。\\n\\n建議使用圖書館館藏查詢系統，確認書籍位置、借閱狀態及電子資源的使用方式。')">
-        <div class="icon">📚</div>
-        <h3>館藏與閱讀資源</h3>
-        <p>實體書籍、期刊、電子資源與輕鬆閱讀區。</p>
+
+      <!-- 1. 館藏與閱讀資源 -->
+
+      <div
+        class="card"
+        tabindex="0"
+        onclick="openInfo(
+          '📚 館藏與閱讀資源',
+          '豐富的閱讀與研究資料',
+          '蘭潭圖書館提供豐富的實體書籍、期刊與電子資源，館藏重點涵蓋理工、農學及自然科學等 STEM 領域。\\n\\n一樓設有輕鬆閱讀區，提供舒適沙發、報紙及休閒書刊，適合課餘閱讀與休息。'
+        )"
+      >
+
+        <div class="icon">
+          📚
+        </div>
+
+        <h3>
+          館藏與閱讀資源
+        </h3>
+
+        <p>
+          實體書籍、期刊、電子資源與輕鬆閱讀區。
+        </p>
+
       </div>
 
-      <div class="card" tabindex="0"
-        data-key="學習 自修 閱覽 座位 1000 共享空間 筆電 B1 地下室 安靜 讀書"
-        onclick="openInfo('📖 學習與自修空間','閱讀、學習與自主進修',
-        '全館提供約 1,000 個閱覽及自修座位，並設有學習共享空間、筆電使用專區及地下室 B1 自修室。\\n\\n學生可依照個人需求，選擇適合的閱讀或自修環境。座位是否需要預約、開放時間及實際使用規定，請以圖書館最新公告為準。')">
-        <div class="icon">📖</div>
-        <h3>學習與自修空間</h3>
-        <p>閱覽座位、學習共享空間、筆電專區與 B1 自修室。</p>
+
+
+      <!-- 2. 學習與自修空間 -->
+
+      <div
+        class="card"
+        tabindex="0"
+        onclick="openInfo(
+          '📖 學習與自修空間',
+          '閱讀、學習與自主進修',
+          '全館提供約 1,000 個閱覽及自修座位，並設有學習共享空間、筆電使用專區及地下室 B1 自修室。\\n\\n學生可以依照個人需求，選擇適合的閱讀與自修環境。'
+        )"
+      >
+
+        <div class="icon">
+          📖
+        </div>
+
+        <h3>
+          學習與自修空間
+        </h3>
+
+        <p>
+          閱覽座位、學習共享空間、筆電專區與 B1 自修室。
+        </p>
+
       </div>
 
-      <div class="card" tabindex="0"
-        data-key="視聽 會議 演講廳 250人 50人 會議室 密集書庫 B1 活動"
-        onclick="openInfo('🎬 視聽與會議設施','演講、會議與團體活動',
-        '圖書館 B1 設有大型演講廳及多間會議室，並有密集書庫等空間。\\n\\n相關設施可支援演講、會議、課程及團體活動。大型演講廳約可容納 250 人，部分會議室約可容納 50 人。實際可使用空間、設備及借用方式，請洽圖書館確認。')">
-        <div class="icon">🎬</div>
-        <h3>視聽與會議設施</h3>
-        <p>大型演講廳、會議室與密集書庫等設施。</p>
+
+
+      <!-- 3. 視聽與會議設施 -->
+
+      <div
+        class="card"
+        tabindex="0"
+        onclick="openInfo(
+          '🎬 視聽與會議設施',
+          '演講、會議與團體活動',
+          '圖書館 B1 設有大型演講廳、多間會議室及密集書庫等空間。\\n\\n相關設施可支援演講、會議、課程及團體活動。大型演講廳約可容納 250 人，部分會議室約可容納 50 人。'
+        )"
+      >
+
+        <div class="icon">
+          🎬
+        </div>
+
+        <h3>
+          視聽與會議設施
+        </h3>
+
+        <p>
+          大型演講廳、會議室與密集書庫等設施。
+        </p>
+
       </div>
 
-      <div class="card" tabindex="0"
-        data-key="藝文 展覽 藝術 書畫 文物 展覽廳 多功能展覽 常設作品 校友"
-        onclick="openInfo('🎨 藝文展覽功能','校園藝文與文化展示',
-        '圖書館一樓設有多功能展覽廳，可作為藝術創作、校友書畫及主題文物展覽的展示空間。\\n\\n館內也可欣賞藝術家捐贈作品及相關展覽。參訪時可留意現場展覽資訊與活動公告，了解校園藝文活動。')">
-        <div class="icon">🎨</div>
-        <h3>藝文展覽功能</h3>
-        <p>藝術創作、校友書畫、主題文物與藝文活動。</p>
+
+
+      <!-- 4. 藝文展覽功能 -->
+
+      <div
+        class="card"
+        tabindex="0"
+        onclick="openInfo(
+          '🎨 藝文展覽功能',
+          '校園藝文與文化展示',
+          '一樓設有大型多功能展覽廳，可舉辦藝術創作、校友書畫及主題文物展覽。\\n\\n館內也陳列藝術家捐贈作品，提供學生與訪客欣賞藝文作品及參與文化活動的空間。'
+        )"
+      >
+
+        <div class="icon">
+          🎨
+        </div>
+
+        <h3>
+          藝文展覽功能
+        </h3>
+
+        <p>
+          藝術創作、校友書畫、主題文物與藝文活動。
+        </p>
+
       </div>
 
-      <div class="card" tabindex="0"
-        data-key="資訊 技術 電腦 網路 資料庫 檢索 掃描 影印 列印 主題館員 論文"
-        onclick="openInfo('💻 資訊與技術支援','研究工具與資訊服務',
-        '圖書館提供圖書資源檢索、電子資料庫查詢及相關資訊服務，協助學生尋找報告與研究所需的資料。\\n\\n館內另有電腦、網路及掃描、影印與列印等相關設備。各學科主題館員也能提供資源指引，協助讀者提升資料查找效率。\\n\\n設備位置、使用規定及服務時間，請以館方公告為準。')">
-        <div class="icon">💻</div>
-        <h3>資訊與技術支援</h3>
-        <p>圖書檢索、電子資料庫、電腦、網路與文件處理。</p>
+
+
+      <!-- 5. 資訊與技術支援 -->
+
+      <div
+        class="card"
+        tabindex="0"
+        onclick="openInfo(
+          '💻 資訊與技術支援',
+          '研究工具與資訊服務',
+          '館內提供校園網路、電腦教室、圖書資源檢索及電子資料庫等資訊服務。\\n\\n同時提供掃描、影印與列印設備，以及各學科主題館員的資源指引服務，協助學生進行學習與研究。'
+        )"
+      >
+
+        <div class="icon">
+          💻
+        </div>
+
+        <h3>
+          資訊與技術支援
+        </h3>
+
+        <p>
+          電腦、網路、資料檢索、掃描、影印與列印服務。
+        </p>
+
       </div>
 
-      <div class="card" tabindex="0"
-        data-key="讀者 服務 借閱 還書 新書 語言學習 公告 活動 館員 協助 指引"
-        onclick="openInfo('🤝 圖書館服務與讀者支援','讓使用圖書館更加方便',
-        '圖書館透過借閱服務、館藏資訊、最新公告與活動資訊，協助讀者了解並使用各項資源。\\n\\n遇到找不到書籍、不了解資料庫操作或不確定空間位置等問題時，可以查閱圖書館網站，或向館員詢問。\\n\\n新書資訊、語言學習相關服務及其他服務的實際內容與開放情況，請依館方最新公告為準。')">
-        <div class="icon">🤝</div>
-        <h3>圖書館服務與讀者支援</h3>
-        <p>借閱服務、新書資訊、公告活動與館員協助。</p>
+
+
+      <!-- 6. 圖書館服務與讀者支援 -->
+
+      <div
+        class="card"
+        tabindex="0"
+        onclick="openInfo(
+          '🤝 圖書館服務與讀者支援',
+          '協助讀者使用圖書館資源',
+          '圖書館提供借閱服務、新書資訊、活動公告及各項讀者服務。\\n\\n當學生遇到找不到書籍、資料庫使用問題或不清楚服務位置時，可以透過圖書館網站或向館員尋求協助。'
+        )"
+      >
+
+        <div class="icon">
+          🤝
+        </div>
+
+        <h3>
+          圖書館服務與讀者支援
+        </h3>
+
+        <p>
+          借閱服務、新書資訊、公告活動與館員協助。
+        </p>
+
       </div>
 
-    </div>
 
-    <div class="empty" id="empty">
-      找不到符合的功能，請試試其他關鍵字。
-    </div>
-  </section>
-
-  <section class="feature">
-
-    <div class="panel">
-      <h2>📊 空間與服務資訊</h2>
-      <p class="sub">以下為展示用內容，並非即時座位或預約資料。</p>
-
-      <div class="status">
-        <span>自修與閱覽空間</span>
-        <span>請確認現場狀況</span>
-      </div>
-
-      <div class="status">
-        <span>會議及活動空間</span>
-        <span>請確認借用規定</span>
-      </div>
-
-      <div class="status">
-        <span>館藏與電子資源</span>
-        <span>可查詢館藏系統</span>
-      </div>
-
-      <button class="btn" onclick="openInfo('📊 空間與服務資訊','使用前的小提醒',
-      '本區目前為展示用資訊，尚未串接圖書館即時座位或預約系統。\\n\\n如需確認開放時間、座位狀況、空間借用或設備使用方式，請以嘉義大學圖書館官方網站及現場公告為準。')">
-        查看使用提醒
-      </button>
-    </div>
-
-    <div class="qrbox">
-      <h2>📱 分享圖書館指南</h2>
-      <img id="qr" alt="蘭潭圖書館指南 QR Code">
-      <div class="url" id="pageUrl"></div>
-      <p>使用手機相機掃描，即可開啟本指南。</p>
-      <a id="openPage" class="btn" href="#" target="_blank" rel="noopener">
-        開啟網站
-      </a>
     </div>
 
   </section>
 
 </main>
 
-<footer>
-  國立嘉義大學蘭潭圖書館學生服務指南｜課堂展示 Prototype
-</footer>
 
-<div class="modal" id="modal"
-  onclick="if(event.target===this)closeInfo()">
 
-  <div class="modalbox" role="dialog" aria-modal="true"
-    aria-labelledby="modalTitle">
+<!-- ===== Modal ===== -->
 
-    <button class="close" aria-label="關閉視窗"
-      onclick="closeInfo()">×</button>
+<div
+  class="modal"
+  id="modal"
+  onclick="if(event.target===this) closeInfo()"
+>
 
-    <h2 id="modalTitle"></h2>
-    <h3 id="modalSub"></h3>
-    <p id="modalText"></p>
+  <div class="modalbox">
 
-    <div class="result">
-      💡 <b>設計目的：</b>
-      將圖書館資源依照使用需求分類，讓學生能快速找到服務，
-      降低查找資訊的時間與使用門檻。
+    <button
+      class="close"
+      onclick="closeInfo()"
+      aria-label="關閉"
+    >
+      ×
+    </button>
+
+    <h2 id="modalTitle">
+      功能名稱
+    </h2>
+
+    <div
+      class="modal-sub"
+      id="modalSub"
+    >
+      功能說明
     </div>
+
+    <div
+      class="modal-text"
+      id="modalText"
+    >
+      詳細內容
+    </div>
+
   </div>
+
 </div>
 
+
+
+<!-- ===== JavaScript ===== -->
+
 <script>
+
 function openInfo(title, sub, text) {
-  document.getElementById('modalTitle').textContent = title;
-  document.getElementById('modalSub').textContent = sub;
-  document.getElementById('modalText').textContent = text;
-  document.getElementById('modal').classList.add('show');
+
+  document.getElementById("modalTitle").textContent = title;
+
+  document.getElementById("modalSub").textContent = sub;
+
+  document.getElementById("modalText").textContent = text;
+
+  document.getElementById("modal").classList.add("show");
+
 }
+
 
 function closeInfo() {
-  document.getElementById('modal').classList.remove('show');
+
+  document.getElementById("modal").classList.remove("show");
+
 }
 
-function searchCards() {
-  const q = document.getElementById('search').value
-    .trim().toLowerCase();
 
-  const cards = document.querySelectorAll('#cards .card');
-  let count = 0;
+/* 支援鍵盤操作 */
 
-  cards.forEach(card => {
-    const text = (
-      card.dataset.key + ' ' + card.innerText
-    ).toLowerCase();
+document.querySelectorAll("#cards .card").forEach(card => {
 
-    const matched = !q || text.includes(q);
-    card.style.display = matched ? '' : 'none';
+  card.addEventListener("keydown", event => {
 
-    if (matched) count++;
-  });
+    if(event.key === "Enter" || event.key === " ") {
 
-  document.getElementById('empty').style.display =
-    count === 0 ? 'block' : 'none';
-}
-
-// 固定使用正式 GitHub Pages 網址，避免產生錯誤 QR Code。
-const siteUrl = 'https://yanshui-cake.github.io/aaa/';
-
-document.getElementById('pageUrl').textContent = siteUrl;
-document.getElementById('openPage').href = siteUrl;
-
-document.getElementById('qr').src =
-  'https://api.qrserver.com/v1/create-qr-code/?size=300x300&data='
-  + encodeURIComponent(siteUrl);
-
-// 支援鍵盤操作
-document.querySelectorAll('#cards .card').forEach(card => {
-  card.addEventListener('keydown', event => {
-    if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
+
       card.click();
+
     }
+
   });
+
 });
 
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape') closeInfo();
+
+/* 按 ESC 關閉視窗 */
+
+document.addEventListener("keydown", event => {
+
+  if(event.key === "Escape") {
+
+    closeInfo();
+
+  }
+
 });
+
 </script>
+
 
 </body>
 </html>
-```
