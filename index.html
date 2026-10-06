@@ -181,6 +181,38 @@ section{
 }
 
 
+/* ===== 查詢按鈕區塊 ===== */
+
+.search-option{
+  display:block;
+  text-decoration:none;
+  color:var(--text);
+  background:#f5f8fc;
+  border:1px solid #e1e8f0;
+  border-radius:15px;
+  padding:18px;
+  margin-top:14px;
+  transition:.2s;
+}
+
+.search-option:hover{
+  background:#eef4ff;
+  border-color:#2d6cdf;
+  transform:translateY(-2px);
+}
+
+.search-option-title{
+  font-size:18px;
+  font-weight:800;
+  margin-bottom:5px;
+}
+
+.search-option-text{
+  font-size:14px;
+  color:var(--muted);
+}
+
+
 /* ===== 手機版 ===== */
 
 @media(max-width:800px){
@@ -261,11 +293,7 @@ section{
       <div
         class="card"
         tabindex="0"
-        onclick="openInfo(
-          '📚 館藏與閱讀資源',
-          '豐富的閱讀與研究資料',
-          '蘭潭圖書館提供豐富的實體書籍、期刊與電子資源，館藏重點涵蓋理工、農學及自然科學等 STEM 領域。\\n\\n一樓設有輕鬆閱讀區，提供舒適沙發、報紙及休閒書刊，適合課餘閱讀與休息。'
-        )"
+        onclick="openCollection()"
       >
 
         <div class="icon">
@@ -477,6 +505,9 @@ section{
 
 <script>
 
+
+/* 一般功能說明 */
+
 function openInfo(title, sub, text) {
 
   document.getElementById("modalTitle").textContent = title;
@@ -489,6 +520,62 @@ function openInfo(title, sub, text) {
 
 }
 
+
+/* 館藏與閱讀資源 */
+
+function openCollection() {
+
+  document.getElementById("modalTitle").textContent =
+    "📚 館藏與閱讀資源";
+
+  document.getElementById("modalSub").textContent =
+    "選擇你要查詢的資源";
+
+  document.getElementById("modalText").innerHTML = `
+
+    <a
+      class="search-option"
+      href="https://libaleph.ncyu.edu.tw/F/ET2CV68F9UYV7HJ14FR12684DKYPYS4NTXPR8RSBRUSE6XDKVQ-01688?&pds_handle=GUEST"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <div class="search-option-title">
+        📚 實體書籍查詢
+      </div>
+
+      <div class="search-option-text">
+        查詢圖書館實體書籍、期刊等館藏資料
+      </div>
+
+    </a>
+
+
+    <a
+      class="search-option"
+      href="https://website.ncyu.edu.tw/lib/Subject?nodeId=44461"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <div class="search-option-title">
+        📱 電子書查詢
+      </div>
+
+      <div class="search-option-text">
+        查詢圖書館提供的電子書與電子資源
+      </div>
+
+    </a>
+
+  `;
+
+  document.getElementById("modal").classList.add("show");
+
+}
+
+
+/* 關閉視窗 */
 
 function closeInfo() {
 
