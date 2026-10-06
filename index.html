@@ -362,30 +362,43 @@
             background: #173b5c;
             color: white;
             margin-top: 60px;
-            padding: 35px 20px;
-            text-align: center;
+            padding: 40px 30px;
+            text-align: left;
+        }
+
+        .footer-title-row {
+            display: flex;
+            align-items: baseline;
+            gap: 18px;
+            margin-bottom: 20px;
         }
 
         footer h3 {
-            margin-top: 0;
-            margin-bottom: 18px;
-            font-size: 22px;
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .footer-address {
+            font-size: 18px;
+            opacity: 0.9;
         }
 
         .footer-info {
-            line-height: 1.9;
-            font-size: 14px;
+            line-height: 2;
+            font-size: 18px;
             opacity: 0.95;
         }
 
         .library-home-button {
             display: inline-block;
-            margin-top: 22px;
-            padding: 12px 22px;
+            margin-top: 25px;
+            padding: 13px 24px;
             background: white;
             color: #173b5c;
             text-decoration: none;
             border-radius: 9px;
+            font-size: 17px;
             font-weight: bold;
             transition: 0.2s;
         }
@@ -482,6 +495,26 @@
             .info-content {
                 font-size: 14px;
             }
+
+            /* Footer 手機版 */
+
+            .footer-title-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
+            footer h3 {
+                font-size: 24px;
+            }
+
+            .footer-address {
+                font-size: 16px;
+            }
+
+            .footer-info {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -493,6 +526,7 @@
     ========================= -->
 
     <header>
+
         <div class="school-name">
             📚 嘉義大學｜蘭潭圖書館
         </div>
@@ -500,6 +534,7 @@
         <h1>
             蘭潭圖書館服務指南
         </h1>
+
     </header>
 
 
@@ -511,19 +546,64 @@
 
         <div class="card-grid">
 
-            <!-- 1. 館藏與閱讀資源 -->
+            <!-- 1. 藝文展覽功能 -->
+            <div
+                class="card"
+                onclick="openArt()"
+                tabindex="0"
+                onkeydown="cardKey(event, openArt)"
+            >
+
+                <div class="icon">
+                    🎨
+                </div>
+
+                <h3>
+                    藝文展覽功能
+                </h3>
+
+            </div>
+
+
+            <!-- 2. 館藏與閱讀資源 -->
             <div
                 class="card"
                 onclick="openCollection()"
                 tabindex="0"
                 onkeydown="cardKey(event, openCollection)"
             >
-                <div class="icon">📚</div>
-                <h3>館藏與閱讀資源</h3>
+
+                <div class="icon">
+                    📚
+                </div>
+
+                <h3>
+                    館藏與閱讀資源
+                </h3>
+
             </div>
 
 
-            <!-- 2. 學習與自修空間 -->
+            <!-- 3. 視聽與會議設施 -->
+            <div
+                class="card"
+                onclick="openAudioMeeting()"
+                tabindex="0"
+                onkeydown="cardKey(event, openAudioMeeting)"
+            >
+
+                <div class="icon">
+                    🎬
+                </div>
+
+                <h3>
+                    視聽與會議設施
+                </h3>
+
+            </div>
+
+
+            <!-- 4. 學習與自修空間 -->
             <div
                 class="card"
                 onclick="openDeveloping(
@@ -538,32 +618,15 @@
                     )
                 )"
             >
-                <div class="icon">📖</div>
-                <h3>學習與自修空間</h3>
-            </div>
 
+                <div class="icon">
+                    📖
+                </div>
 
-            <!-- 3. 視聽與會議設施 -->
-            <div
-                class="card"
-                onclick="openAudioMeeting()"
-                tabindex="0"
-                onkeydown="cardKey(event, openAudioMeeting)"
-            >
-                <div class="icon">🎬</div>
-                <h3>視聽與會議設施</h3>
-            </div>
+                <h3>
+                    學習與自修空間
+                </h3>
 
-
-            <!-- 4. 藝文展覽功能 -->
-            <div
-                class="card"
-                onclick="openArt()"
-                tabindex="0"
-                onkeydown="cardKey(event, openArt)"
-            >
-                <div class="icon">🎨</div>
-                <h3>藝文展覽功能</h3>
             </div>
 
 
@@ -574,8 +637,15 @@
                 tabindex="0"
                 onkeydown="cardKey(event, openInformationServices)"
             >
-                <div class="icon">💻</div>
-                <h3>資訊與技術支援</h3>
+
+                <div class="icon">
+                    💻
+                </div>
+
+                <h3>
+                    資訊與技術支援
+                </h3>
+
             </div>
 
 
@@ -586,8 +656,15 @@
                 tabindex="0"
                 onkeydown="cardKey(event, openAI)"
             >
-                <div class="icon">🤖</div>
-                <h3>圖書館 AI 小幫手</h3>
+
+                <div class="icon">
+                    🤖
+                </div>
+
+                <h3>
+                    圖書館 AI 小幫手
+                </h3>
+
             </div>
 
         </div>
@@ -637,14 +714,20 @@
 
     <footer>
 
-        <h3>
-            📚 蘭潭圖書資訊處
-        </h3>
+        <div class="footer-title-row">
+
+            <h3>
+                📚 蘭潭圖書資訊處
+            </h3>
+
+            <div class="footer-address">
+                地址:嘉義市鹿寮里學府路300號
+            </div>
+
+        </div>
+
 
         <div class="footer-info">
-
-            600355 嘉義市鹿寮里學府路300號
-            <br>
 
             TEL: 05-2717233（圖書諮詢）
             <br>
@@ -661,6 +744,7 @@
             TEL: 05-2717258（資訊諮詢）
 
         </div>
+
 
         <a
             class="library-home-button"
@@ -679,10 +763,17 @@
 
     <script>
 
-        const modal = document.getElementById("infoModal");
-        const modalTitle = document.getElementById("modalTitle");
-        const modalSubtitle = document.getElementById("modalSubtitle");
-        const modalBody = document.getElementById("modalBody");
+        const modal =
+            document.getElementById("infoModal");
+
+        const modalTitle =
+            document.getElementById("modalTitle");
+
+        const modalSubtitle =
+            document.getElementById("modalSubtitle");
+
+        const modalBody =
+            document.getElementById("modalBody");
 
 
         /* =========================
@@ -691,7 +782,10 @@
 
         function cardKey(event, callback) {
 
-            if (event.key === "Enter" || event.key === " ") {
+            if (
+                event.key === "Enter" ||
+                event.key === " "
+            ) {
 
                 event.preventDefault();
 
@@ -706,7 +800,8 @@
 
         function openCollection() {
 
-            modalTitle.textContent = "📚 館藏與閱讀資源";
+            modalTitle.textContent =
+                "📚 館藏與閱讀資源";
 
             modalSubtitle.textContent =
                 "查找圖書館館藏與電子閱讀資源";
@@ -776,11 +871,16 @@
            Developing
         ========================= */
 
-        function openDeveloping(title, subtitle) {
+        function openDeveloping(
+            title,
+            subtitle
+        ) {
 
-            modalTitle.textContent = title;
+            modalTitle.textContent =
+                title;
 
-            modalSubtitle.textContent = subtitle;
+            modalSubtitle.textContent =
+                subtitle;
 
             modalBody.innerHTML = `
 
@@ -1125,6 +1225,7 @@
                         👩‍🏫 館員資訊服務
                     </strong>
 
+
                     <p>
                         如果不知道如何尋找特定資料，
                         或不清楚如何使用圖書館資源，
@@ -1171,16 +1272,27 @@
                                 你可以問我：
 
                                 <br>
+
                                 • 哪裡可以找書？
+
                                 <br>
+
                                 • 圖書館有電子書嗎？
+
                                 <br>
+
                                 • 哪裡可以印東西？
+
                                 <br>
+
                                 • 會議室怎麼預約？
+
                                 <br>
+
                                 • 圖書館有什麼展覽？
+
                                 <br>
+
                                 • 有電腦或 Wi-Fi 嗎？
 
                             </div>
@@ -1214,13 +1326,16 @@
 
             modal.classList.add("show");
 
+
             setTimeout(() => {
 
                 const input =
                     document.getElementById("aiInput");
 
                 if (input) {
+
                     input.focus();
+
                 }
 
             }, 100);
@@ -1238,6 +1353,7 @@
                 event.preventDefault();
 
                 askAI();
+
             }
         }
 
@@ -1255,14 +1371,19 @@
                 document.getElementById("aiMessages");
 
             if (!input || !messages) {
+
                 return;
+
             }
+
 
             const question =
                 input.value.trim();
 
             if (question === "") {
+
                 return;
+
             }
 
 
@@ -1275,9 +1396,13 @@
                 "message user";
 
             userMessage.innerHTML = `
+
                 <div class="bubble">
+
                     ${escapeHTML(question)}
+
                 </div>
+
             `;
 
             messages.appendChild(userMessage);
@@ -1298,9 +1423,13 @@
                 "message bot";
 
             botMessage.innerHTML = `
+
                 <div class="bubble">
+
                     ${answer}
+
                 </div>
+
             `;
 
             messages.appendChild(botMessage);
@@ -1331,12 +1460,14 @@
             ) {
 
                 return `
+
                     📖 圖書館有學習與自修空間。
 
                     <br><br>
 
                     目前網站尚未連接即時座位系統，
                     所以我無法確認現在是否還有空位。
+
                 `;
             }
 
@@ -1351,6 +1482,7 @@
             ) {
 
                 return `
+
                     📚 你可以使用「館藏查詢」功能
                     搜尋圖書館的書籍、期刊及其他館藏資料。
 
@@ -1358,6 +1490,7 @@
 
                     請回到首頁點選
                     「館藏與閱讀資源」。
+
                 `;
             }
 
@@ -1371,6 +1504,7 @@
             ) {
 
                 return `
+
                     📱 圖書館提供電子書與電子資源。
 
                     <br><br>
@@ -1383,6 +1517,7 @@
 
                     如果要查詢電子資料庫，
                     可以到「資訊與技術支援」。
+
                 `;
             }
 
@@ -1396,8 +1531,10 @@
             ) {
 
                 return `
+
                     🖨️ 圖書館一樓提供
                     列印、影印與掃描設備。
+
                 `;
             }
 
@@ -1411,6 +1548,7 @@
             ) {
 
                 return `
+
                     🎬 你可以使用
                     「視聽與會議設施」功能。
 
@@ -1419,6 +1557,7 @@
                     裡面有
                     「視聽團體室、會議室預約」
                     的連結。
+
                 `;
             }
 
@@ -1433,9 +1572,11 @@
             ) {
 
                 return `
+
                     🌐 圖書館提供網路與電腦相關資訊服務，
                     可以協助學生進行資料查詢、
                     網路學習與研究工作。
+
                 `;
             }
 
@@ -1449,8 +1590,9 @@
             ) {
 
                 return `
+
                     🎨 你可以點選首頁的
-                    「藝文展覽功能」，
+                    「藝文展覽功能」。
 
                     <br><br>
 
@@ -1458,6 +1600,7 @@
                     郭東榮作品展、
                     蕭萬長文物館以及
                     混沌&圓成展覽等資訊。
+
                 `;
             }
 
@@ -1471,9 +1614,11 @@
             ) {
 
                 return `
+
                     🕐 關於圖書館最新開放時間，
                     建議查看嘉義大學圖書館官方網站
                     的最新公告。
+
                 `;
             }
 
@@ -1487,6 +1632,7 @@
             ) {
 
                 return `
+
                     🎬 圖書館有線上影音公播平台。
 
                     <br><br>
@@ -1495,6 +1641,7 @@
                     「資訊與技術支援」，
                     點選「線上影音公播平台」
                     查看相關資訊。
+
                 `;
             }
 
@@ -1502,27 +1649,41 @@
             /* Default */
 
             return `
+
                 🤖 我目前可以協助你了解：
 
                 <br><br>
 
                 📚 館藏查詢
+
                 <br>
+
                 📱 電子書
+
                 <br>
+
                 🖨️ 列印、影印與掃描
+
                 <br>
+
                 🎬 會議室與團體室
+
                 <br>
+
                 🎨 藝文展覽
+
                 <br>
+
                 💻 電腦與網路
+
                 <br>
+
                 🎞️ 線上影音
 
                 <br><br>
 
                 你可以直接輸入想知道的服務。
+
             `;
         }
 
@@ -1536,7 +1697,8 @@
             const div =
                 document.createElement("div");
 
-            div.textContent = text;
+            div.textContent =
+                text;
 
             return div.innerHTML;
         }
@@ -1557,6 +1719,7 @@
             if (event.target === modal) {
 
                 closeInfo();
+
             }
         }
 
@@ -1572,6 +1735,7 @@
                 if (event.key === "Escape") {
 
                     closeInfo();
+
                 }
 
             }
