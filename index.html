@@ -181,9 +181,9 @@ section{
 }
 
 
-/* ===== 查詢按鈕區塊 ===== */
+/* ===== 彈出選項 ===== */
 
-.search-option{
+.option{
   display:block;
   text-decoration:none;
   color:var(--text);
@@ -193,23 +193,51 @@ section{
   padding:18px;
   margin-top:14px;
   transition:.2s;
+  cursor:pointer;
 }
 
-.search-option:hover{
+.option:hover{
   background:#eef4ff;
   border-color:#2d6cdf;
   transform:translateY(-2px);
 }
 
-.search-option-title{
+.option-title{
   font-size:18px;
   font-weight:800;
   margin-bottom:5px;
 }
 
-.search-option-text{
+.option-text{
   font-size:14px;
   color:var(--muted);
+}
+
+
+/* ===== 等待開發 ===== */
+
+.developing{
+  text-align:center;
+  padding:30px 15px;
+  background:#f5f8fc;
+  border-radius:15px;
+  border:1px solid #e1e8f0;
+}
+
+.developing-icon{
+  font-size:45px;
+  margin-bottom:12px;
+}
+
+.developing-title{
+  font-size:20px;
+  font-weight:800;
+  margin-bottom:8px;
+}
+
+.developing-text{
+  color:var(--muted);
+  font-size:14px;
 }
 
 
@@ -317,11 +345,7 @@ section{
       <div
         class="card"
         tabindex="0"
-        onclick="openInfo(
-          '📖 學習與自修空間',
-          '閱讀、學習與自主進修',
-          '全館提供約 1,000 個閱覽及自修座位，並設有學習共享空間、筆電使用專區及地下室 B1 自修室。\\n\\n學生可以依照個人需求，選擇適合的閱讀與自修環境。'
-        )"
+        onclick="openDeveloping('📖 學習與自修空間')"
       >
 
         <div class="icon">
@@ -345,11 +369,7 @@ section{
       <div
         class="card"
         tabindex="0"
-        onclick="openInfo(
-          '🎬 視聽與會議設施',
-          '演講、會議與團體活動',
-          '圖書館 B1 設有大型演講廳、多間會議室及密集書庫等空間。\\n\\n相關設施可支援演講、會議、課程及團體活動。大型演講廳約可容納 250 人，部分會議室約可容納 50 人。'
-        )"
+        onclick="openAudioMeeting()"
       >
 
         <div class="icon">
@@ -361,7 +381,7 @@ section{
         </h3>
 
         <p>
-          大型演講廳、會議室與密集書庫等設施。
+          視聽團體室、會議室與館藏電影等服務。
         </p>
 
       </div>
@@ -373,11 +393,7 @@ section{
       <div
         class="card"
         tabindex="0"
-        onclick="openInfo(
-          '🎨 藝文展覽功能',
-          '校園藝文與文化展示',
-          '一樓設有大型多功能展覽廳，可舉辦藝術創作、校友書畫及主題文物展覽。\\n\\n館內也陳列藝術家捐贈作品，提供學生與訪客欣賞藝文作品及參與文化活動的空間。'
-        )"
+        onclick="openArt()"
       >
 
         <div class="icon">
@@ -389,7 +405,7 @@ section{
         </h3>
 
         <p>
-          藝術創作、校友書畫、主題文物與藝文活動。
+          藝文系列展、作品展與特色文物展覽。
         </p>
 
       </div>
@@ -506,7 +522,7 @@ section{
 <script>
 
 
-/* 一般功能說明 */
+/* ===== 一般功能說明 ===== */
 
 function openInfo(title, sub, text) {
 
@@ -521,7 +537,7 @@ function openInfo(title, sub, text) {
 }
 
 
-/* 館藏與閱讀資源 */
+/* ===== 館藏與閱讀資源 ===== */
 
 function openCollection() {
 
@@ -534,17 +550,17 @@ function openCollection() {
   document.getElementById("modalText").innerHTML = `
 
     <a
-      class="search-option"
+      class="option"
       href="https://libaleph.ncyu.edu.tw/F/ET2CV68F9UYV7HJ14FR12684DKYPYS4NTXPR8RSBRUSE6XDKVQ-01688?&pds_handle=GUEST"
       target="_blank"
       rel="noopener noreferrer"
     >
 
-      <div class="search-option-title">
+      <div class="option-title">
         📚 實體書籍查詢
       </div>
 
-      <div class="search-option-text">
+      <div class="option-text">
         查詢圖書館實體書籍、期刊等館藏資料
       </div>
 
@@ -552,17 +568,17 @@ function openCollection() {
 
 
     <a
-      class="search-option"
+      class="option"
       href="https://website.ncyu.edu.tw/lib/Subject?nodeId=44461"
       target="_blank"
       rel="noopener noreferrer"
     >
 
-      <div class="search-option-title">
+      <div class="option-title">
         📱 電子書查詢
       </div>
 
-      <div class="search-option-text">
+      <div class="option-text">
         查詢圖書館提供的電子書與電子資源
       </div>
 
@@ -575,7 +591,187 @@ function openCollection() {
 }
 
 
-/* 關閉視窗 */
+
+/* ===== 學習與自修空間 ===== */
+
+function openDeveloping(title) {
+
+  document.getElementById("modalTitle").textContent = title;
+
+  document.getElementById("modalSub").textContent =
+    "功能開發中";
+
+  document.getElementById("modalText").innerHTML = `
+
+    <div class="developing">
+
+      <div class="developing-icon">
+        🚧
+      </div>
+
+      <div class="developing-title">
+        等待學校開發中
+      </div>
+
+      <div class="developing-text">
+        此功能目前尚在規劃與開發階段，敬請期待。
+      </div>
+
+    </div>
+
+  `;
+
+  document.getElementById("modal").classList.add("show");
+
+}
+
+
+
+/* ===== 視聽與會議設施 ===== */
+
+function openAudioMeeting() {
+
+  document.getElementById("modalTitle").textContent =
+    "🎬 視聽與會議設施";
+
+  document.getElementById("modalSub").textContent =
+    "選擇你需要的服務";
+
+  document.getElementById("modalText").innerHTML = `
+
+    <a
+      class="option"
+      href="https://website.ncyu.edu.tw/lib/Contents?nodeId=61819"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <div class="option-title">
+        🎬 視聽團體室、會議室預約
+      </div>
+
+      <div class="option-text">
+        查看視聽團體室及會議室相關資訊與預約服務
+      </div>
+
+    </a>
+
+
+    <div
+      class="option"
+      onclick="openDeveloping('🎞️ 館藏電影的清單')"
+    >
+
+      <div class="option-title">
+        🎞️ 館藏電影的清單
+      </div>
+
+      <div class="option-text">
+        查看圖書館館藏電影
+      </div>
+
+    </div>
+
+  `;
+
+  document.getElementById("modal").classList.add("show");
+
+}
+
+
+
+/* ===== 藝文展覽 ===== */
+
+function openArt() {
+
+  document.getElementById("modalTitle").textContent =
+    "🎨 藝文展覽功能";
+
+  document.getElementById("modalSub").textContent =
+    "選擇你想參觀的展覽";
+
+  document.getElementById("modalText").innerHTML = `
+
+    <a
+      class="option"
+      href="https://www.ncyu.edu.tw/ncyu/Subject/Detail/244673?nodeId=835"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <div class="option-title">
+        🎨 藝文系列展
+      </div>
+
+      <div class="option-text">
+        查看嘉義大學藝文系列展相關資訊
+      </div>
+
+    </a>
+
+
+    <a
+      class="option"
+      href="https://www.ncyu.edu.tw/ncyu/Subject/Detail/212412?nodeId=835"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <div class="option-title">
+        🖼️ 郭東榮作品展
+      </div>
+
+      <div class="option-text">
+        查看郭東榮作品展相關資訊
+      </div>
+
+    </a>
+
+
+    <a
+      class="option"
+      href="https://website.ncyu.edu.tw/vincentsiew/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <div class="option-title">
+        🏛️ 蕭萬長文物館
+      </div>
+
+      <div class="option-text">
+        進入蕭萬長文物館網站
+      </div>
+
+    </a>
+
+
+    <a
+      class="option"
+      href="https://website.ncyu.edu.tw/lib/ServerFile/Get/24a08d7e-8b08-4d18-856f-26f070f166f8?nodeId=1669&sId=240915"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <div class="option-title">
+        🌀 混沌&圓成展覽
+      </div>
+
+      <div class="option-text">
+        查看混沌&圓成展覽相關資料
+      </div>
+
+    </a>
+
+  `;
+
+  document.getElementById("modal").classList.add("show");
+
+}
+
+
+
+/* ===== 關閉視窗 ===== */
 
 function closeInfo() {
 
@@ -584,7 +780,7 @@ function closeInfo() {
 }
 
 
-/* 支援鍵盤操作 */
+/* ===== 支援鍵盤操作 ===== */
 
 document.querySelectorAll("#cards .card").forEach(card => {
 
@@ -603,7 +799,7 @@ document.querySelectorAll("#cards .card").forEach(card => {
 });
 
 
-/* 按 ESC 關閉視窗 */
+/* ===== ESC 關閉視窗 ===== */
 
 document.addEventListener("keydown", event => {
 
