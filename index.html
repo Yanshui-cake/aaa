@@ -26,7 +26,10 @@ body{
   color:var(--text);
 }
 
-/* 頁首 */
+/* =========================
+   頁首
+========================= */
+
 header{
   background:linear-gradient(135deg,#17365d,#2d6cdf);
   color:#fff;
@@ -60,7 +63,10 @@ h1{
   line-height:1.15;
 }
 
-/* 卡片 */
+/* =========================
+   主內容
+========================= */
+
 main{
   padding-bottom:40px;
 }
@@ -74,6 +80,10 @@ section{
   grid-template-columns:repeat(3,1fr);
   gap:16px;
 }
+
+/* =========================
+   功能卡片
+========================= */
 
 .card{
   background:var(--card);
@@ -110,7 +120,10 @@ section{
   line-height:1.7;
 }
 
-/* 彈出視窗 */
+/* =========================
+   彈出視窗
+========================= */
+
 .modal{
   display:none;
   position:fixed;
@@ -169,7 +182,10 @@ section{
   color:var(--text);
 }
 
-/* 選項 */
+/* =========================
+   選項按鈕
+========================= */
+
 .option{
   display:block;
   text-decoration:none;
@@ -200,7 +216,10 @@ section{
   color:var(--muted);
 }
 
-/* 開發中 */
+/* =========================
+   功能開發中
+========================= */
+
 .developing{
   text-align:center;
   padding:30px 15px;
@@ -225,7 +244,10 @@ section{
   font-size:14px;
 }
 
-/* AI 小幫手 */
+/* =========================
+   AI 小幫手
+========================= */
+
 .ai-box{
   margin-top:10px;
 }
@@ -305,14 +327,20 @@ section{
   margin-top:10px;
 }
 
-/* RWD */
+/* =========================
+   RWD 手機版
+========================= */
+
 @media(max-width:800px){
+
   .grid{
     grid-template-columns:repeat(2,1fr);
   }
+
 }
 
 @media(max-width:520px){
+
   header{
     padding:30px 18px 45px;
   }
@@ -336,26 +364,48 @@ section{
   .ai-send{
     padding:12px;
   }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
+<!-- =========================
+     頁首
+========================= -->
+
 <header>
+
   <div class="wrap">
 
     <div class="top">
-      <div class="logo">📚 嘉義大學｜蘭潭圖書館</div>
+
+      <div class="logo">
+        📚 嘉義大學｜蘭潭圖書館
+      </div>
+
     </div>
 
+
     <div class="hero">
-      <h1>蘭潭圖書館服務指南</h1>
+
+      <h1>
+        蘭潭圖書館服務指南
+      </h1>
+
     </div>
 
   </div>
+
 </header>
 
+
+<!-- =========================
+     六大功能
+========================= -->
 
 <main class="wrap">
 
@@ -363,12 +413,21 @@ section{
 
 <div class="grid" id="cards">
 
+
   <!-- 1 館藏與閱讀資源 -->
-  <div class="card" tabindex="0" onclick="openCollection()">
 
-    <div class="icon">📚</div>
+  <div
+    class="card"
+    tabindex="0"
+    onclick="openCollection()">
 
-    <h3>館藏與閱讀資源</h3>
+    <div class="icon">
+      📚
+    </div>
+
+    <h3>
+      館藏與閱讀資源
+    </h3>
 
     <p>
       館藏查詢、電子書、期刊與各類閱讀資源。
@@ -378,12 +437,19 @@ section{
 
 
   <!-- 2 學習與自修空間 -->
-  <div class="card" tabindex="0"
-       onclick="openDeveloping('📖 學習與自修空間')">
 
-    <div class="icon">📖</div>
+  <div
+    class="card"
+    tabindex="0"
+    onclick="openDeveloping('📖 學習與自修空間')">
 
-    <h3>學習與自修空間</h3>
+    <div class="icon">
+      📖
+    </div>
+
+    <h3>
+      學習與自修空間
+    </h3>
 
     <p>
       閱覽座位、學習共享空間、筆電專區與 B1 自修室。
@@ -393,11 +459,19 @@ section{
 
 
   <!-- 3 視聽與會議設施 -->
-  <div class="card" tabindex="0" onclick="openAudioMeeting()">
 
-    <div class="icon">🎬</div>
+  <div
+    class="card"
+    tabindex="0"
+    onclick="openAudioMeeting()">
 
-    <h3>視聽與會議設施</h3>
+    <div class="icon">
+      🎬
+    </div>
+
+    <h3>
+      視聽與會議設施
+    </h3>
 
     <p>
       視聽團體室、會議室與館藏電影等服務。
@@ -406,12 +480,20 @@ section{
   </div>
 
 
-  <!-- 4 藝文展覽 -->
-  <div class="card" tabindex="0" onclick="openArt()">
+  <!-- 4 藝文展覽功能 -->
 
-    <div class="icon">🎨</div>
+  <div
+    class="card"
+    tabindex="0"
+    onclick="openArt()">
 
-    <h3>藝文展覽功能</h3>
+    <div class="icon">
+      🎨
+    </div>
+
+    <h3>
+      藝文展覽功能
+    </h3>
 
     <p>
       藝文系列展、作品展與特色文物展覽。
@@ -421,11 +503,19 @@ section{
 
 
   <!-- 5 資訊與技術支援 -->
-  <div class="card" tabindex="0" onclick="openInformationServices()">
 
-    <div class="icon">💻</div>
+  <div
+    class="card"
+    tabindex="0"
+    onclick="openInformationServices()">
 
-    <h3>資訊與技術支援</h3>
+    <div class="icon">
+      💻
+    </div>
+
+    <h3>
+      資訊與技術支援
+    </h3>
 
     <p>
       查看嘉大蘭潭圖書館提供的資訊服務。
@@ -434,18 +524,27 @@ section{
   </div>
 
 
-  <!-- 6 AI 小幫手 -->
-  <div class="card" tabindex="0" onclick="openAI()">
+  <!-- 6 圖書館 AI 小幫手 -->
 
-    <div class="icon">🤖</div>
+  <div
+    class="card"
+    tabindex="0"
+    onclick="openAI()">
 
-    <h3>圖書館 AI 小幫手</h3>
+    <div class="icon">
+      🤖
+    </div>
+
+    <h3>
+      圖書館 AI 小幫手
+    </h3>
 
     <p>
       有圖書館相關問題？讓 AI 小幫手幫你找答案。
     </p>
 
   </div>
+
 
 </div>
 
@@ -454,11 +553,14 @@ section{
 </main>
 
 
-<!-- 彈出視窗 -->
+<!-- =========================
+     彈出視窗
+========================= -->
 
-<div class="modal"
-     id="modal"
-     onclick="if(event.target===this) closeInfo()">
+<div
+  class="modal"
+  id="modal"
+  onclick="if(event.target===this) closeInfo()">
 
   <div class="modalbox">
 
@@ -466,23 +568,32 @@ section{
       class="close"
       onclick="closeInfo()"
       aria-label="關閉">
+
       ×
+
     </button>
+
 
     <h2 id="modalTitle">
       功能名稱
     </h2>
 
+
     <div
       class="modal-sub"
       id="modalSub">
+
       功能說明
+
     </div>
+
 
     <div
       class="modal-text"
       id="modalText">
+
       詳細內容
+
     </div>
 
   </div>
@@ -492,25 +603,29 @@ section{
 
 <script>
 
-/* =========================
+/* ==================================================
    一般資訊視窗
-========================= */
+================================================== */
 
 function openInfo(title, sub, text){
 
-  document.getElementById("modalTitle").textContent = title;
+  document.getElementById("modalTitle").textContent =
+    title;
 
-  document.getElementById("modalSub").textContent = sub;
+  document.getElementById("modalSub").textContent =
+    sub;
 
-  document.getElementById("modalText").textContent = text;
+  document.getElementById("modalText").textContent =
+    text;
 
   document.getElementById("modal").classList.add("show");
+
 }
 
 
-/* =========================
+/* ==================================================
    1. 館藏與閱讀資源
-========================= */
+================================================== */
 
 function openCollection(){
 
@@ -520,9 +635,11 @@ function openCollection(){
   document.getElementById("modalSub").textContent =
     "選擇你要查詢的資源";
 
+
   document.getElementById("modalText").innerHTML = `
 
-    <a class="option"
+    <a
+      class="option"
       href="https://libaleph.ncyu.edu.tw/F/ET2CV68F9UYV7HJ14FR12684DKYPYS4NTXPR8RSBRUSE6XDKVQ-01688?&pds_handle=GUEST"
       target="_blank"
       rel="noopener noreferrer">
@@ -538,7 +655,8 @@ function openCollection(){
     </a>
 
 
-    <a class="option"
+    <a
+      class="option"
       href="https://website.ncyu.edu.tw/lib/Subject?nodeId=44461"
       target="_blank"
       rel="noopener noreferrer">
@@ -555,13 +673,15 @@ function openCollection(){
 
   `;
 
+
   document.getElementById("modal").classList.add("show");
+
 }
 
 
-/* =========================
+/* ==================================================
    2. 學習與自修空間
-========================= */
+================================================== */
 
 function openDeveloping(title){
 
@@ -570,6 +690,7 @@ function openDeveloping(title){
 
   document.getElementById("modalSub").textContent =
     "功能開發中";
+
 
   document.getElementById("modalText").innerHTML = `
 
@@ -591,13 +712,15 @@ function openDeveloping(title){
 
   `;
 
+
   document.getElementById("modal").classList.add("show");
+
 }
 
 
-/* =========================
+/* ==================================================
    3. 視聽與會議設施
-========================= */
+================================================== */
 
 function openAudioMeeting(){
 
@@ -607,9 +730,11 @@ function openAudioMeeting(){
   document.getElementById("modalSub").textContent =
     "選擇你需要的服務";
 
+
   document.getElementById("modalText").innerHTML = `
 
-    <a class="option"
+    <a
+      class="option"
       href="https://website.ncyu.edu.tw/lib/Contents?nodeId=61819"
       target="_blank"
       rel="noopener noreferrer">
@@ -625,7 +750,8 @@ function openAudioMeeting(){
     </a>
 
 
-    <div class="option"
+    <div
+      class="option"
       onclick="openDeveloping('🎞️ 館藏電影的清單')">
 
       <div class="option-title">
@@ -640,13 +766,15 @@ function openAudioMeeting(){
 
   `;
 
+
   document.getElementById("modal").classList.add("show");
+
 }
 
 
-/* =========================
+/* ==================================================
    4. 藝文展覽
-========================= */
+================================================== */
 
 function openArt(){
 
@@ -656,9 +784,11 @@ function openArt(){
   document.getElementById("modalSub").textContent =
     "選擇你想參觀的展覽";
 
+
   document.getElementById("modalText").innerHTML = `
 
-    <a class="option"
+    <a
+      class="option"
       href="https://www.ncyu.edu.tw/ncyu/Subject/Detail/244673?nodeId=835"
       target="_blank"
       rel="noopener noreferrer">
@@ -674,7 +804,8 @@ function openArt(){
     </a>
 
 
-    <a class="option"
+    <a
+      class="option"
       href="https://www.ncyu.edu.tw/ncyu/Subject/Detail/212412?nodeId=835"
       target="_blank"
       rel="noopener noreferrer">
@@ -690,7 +821,8 @@ function openArt(){
     </a>
 
 
-    <a class="option"
+    <a
+      class="option"
       href="https://website.ncyu.edu.tw/vincentsiew/"
       target="_blank"
       rel="noopener noreferrer">
@@ -706,7 +838,8 @@ function openArt(){
     </a>
 
 
-    <a class="option"
+    <a
+      class="option"
       href="https://website.ncyu.edu.tw/lib/ServerFile/Get/24a08d7e-8b08-4d18-856f-26f070f166f8?nodeId=1669&sId=240915"
       target="_blank"
       rel="noopener noreferrer">
@@ -723,13 +856,15 @@ function openArt(){
 
   `;
 
+
   document.getElementById("modal").classList.add("show");
+
 }
 
 
-/* =========================
+/* ==================================================
    5. 資訊與技術支援
-========================= */
+================================================== */
 
 function openInformationServices(){
 
@@ -739,86 +874,53 @@ function openInformationServices(){
   document.getElementById("modalSub").textContent =
     "嘉大蘭潭圖書館資訊服務";
 
+
   document.getElementById("modalText").innerHTML = `
 
-    <div class="option">
+    嘉大蘭潭圖書館提供多項資訊服務，協助學生進行
+    課程學習、資料查詢與研究。
 
-      <div class="option-title">
-        🌐 校園網路與資訊設備
-      </div>
+    <br><br>
 
-      <div class="option-text">
-        圖書館提供網路與電腦設備，方便學生進行查詢、
-        學習、資料蒐集與研究工作。
-      </div>
+    🌐 <strong>網路與電腦服務</strong><br>
+    館內提供網路及電腦設備，方便學生進行資料查詢、
+    網路學習與研究工作。
 
-    </div>
+    <br><br>
 
+    🔎 <strong>館藏與資料檢索</strong><br>
+    可以使用館藏查詢系統搜尋書籍、期刊及其他館藏資料，
+    快速找到需要的學習資源。
 
-    <div class="option">
+    <br><br>
 
-      <div class="option-title">
-        🔎 圖書資源檢索
-      </div>
+    🗂️ <strong>電子資料庫與電子資源</strong><br>
+    提供電子資料庫、電子期刊及電子書等資源，
+    可用於課程報告、專題研究與學術資料蒐集。
 
-      <div class="option-text">
-        可以使用館藏查詢系統搜尋書籍、期刊及其他館藏資料，
-        協助快速找到需要的學習資源。
-      </div>
+    <br><br>
 
-    </div>
+    🖨️ <strong>列印、影印與掃描</strong><br>
+    館內提供列印、影印及掃描設備，
+    方便學生處理課程資料、報告及其他學習文件。
 
+    <br><br>
 
-    <div class="option">
-
-      <div class="option-title">
-        🗂️ 電子資料庫與電子資源
-      </div>
-
-      <div class="option-text">
-        提供各類電子資料庫、電子期刊與電子書，
-        可用於課程報告、專題研究及學術資料蒐集。
-      </div>
-
-    </div>
-
-
-    <div class="option">
-
-      <div class="option-title">
-        🖨️ 列印、影印與掃描
-      </div>
-
-      <div class="option-text">
-        館內提供列印、影印及掃描等設備，
-        可協助學生處理課程資料與學習文件。
-      </div>
-
-    </div>
-
-
-    <div class="option">
-
-      <div class="option-title">
-        👩‍🏫 學科主題館員
-      </div>
-
-      <div class="option-text">
-        如果不知道如何尋找特定學科的資料，
-        可以尋求館員協助，取得相關資源與檢索指引。
-      </div>
-
-    </div>
+    👩‍🏫 <strong>館員資訊服務</strong><br>
+    如果不知道如何尋找特定資料或使用圖書館資源，
+    可以向館員尋求協助，取得相關的資源與檢索指引。
 
   `;
 
+
   document.getElementById("modal").classList.add("show");
+
 }
 
 
-/* =========================
-   6. AI 小幫手
-========================= */
+/* ==================================================
+   6. 圖書館 AI 小幫手
+================================================== */
 
 function openAI(){
 
@@ -826,28 +928,42 @@ function openAI(){
     "🤖 圖書館 AI 小幫手";
 
   document.getElementById("modalSub").textContent =
-    "有問題都可以問問看";
+    "有圖書館相關問題都可以問問看";
+
 
   document.getElementById("modalText").innerHTML = `
 
     <div class="ai-box">
 
-      <div class="ai-messages" id="aiMessages">
+
+      <!-- AI 對話區 -->
+
+      <div
+        class="ai-messages"
+        id="aiMessages">
 
         <div class="ai-message bot">
 
           <div class="ai-bubble">
+
             👋 你好！我是蘭潭圖書館 AI 小幫手。<br><br>
+
             你可以問我圖書館相關問題，例如：<br>
+
             「自習室還有位置嗎？」<br>
+
             「我要去哪裡找書？」<br>
+
             「圖書館可以列印嗎？」
+
           </div>
 
         </div>
 
       </div>
 
+
+      <!-- 輸入區 -->
 
       <div class="ai-input-area">
 
@@ -859,45 +975,60 @@ function openAI(){
           onkeydown="if(event.key==='Enter') askAI()"
         >
 
+
         <button
           class="ai-send"
           onclick="askAI()">
+
           送出
+
         </button>
 
       </div>
 
 
       <div class="ai-hint">
+
         💡 試著問：「自習室還有位置嗎？」
+
       </div>
+
 
     </div>
 
   `;
 
+
   document.getElementById("modal").classList.add("show");
 
+
   setTimeout(() => {
+
     document.getElementById("aiInput").focus();
+
   },100);
+
 }
 
 
-/* =========================
-   AI 回答邏輯
-========================= */
+/* ==================================================
+   AI 問答
+================================================== */
 
 function askAI(){
 
   const input =
     document.getElementById("aiInput");
 
+
   const question =
     input.value.trim();
 
+
   if(!question){
+
     return;
+
   }
 
 
@@ -913,22 +1044,26 @@ function askAI(){
   userMessage.className =
     "ai-message user";
 
+
   userMessage.innerHTML = `
+
     <div class="ai-bubble">
       ${escapeHTML(question)}
     </div>
+
   `;
+
 
   messages.appendChild(userMessage);
 
 
-  /* 產生回答 */
+  /* 取得 AI 回答 */
 
   const answer =
     getAIAnswer(question);
 
 
-  /* 顯示 AI 回答 */
+  /* 顯示 AI */
 
   const botMessage =
     document.createElement("div");
@@ -936,25 +1071,35 @@ function askAI(){
   botMessage.className =
     "ai-message bot";
 
+
   botMessage.innerHTML = `
+
     <div class="ai-bubble">
       🤖 ${answer}
     </div>
+
   `;
+
 
   messages.appendChild(botMessage);
 
 
+  /* 清空輸入框 */
+
   input.value = "";
+
+
+  /* 自動捲到底部 */
 
   messages.scrollTop =
     messages.scrollHeight;
+
 }
 
 
-/* =========================
-   AI 問答資料
-========================= */
+/* ==================================================
+   AI 回答資料
+================================================== */
 
 function getAIAnswer(question){
 
@@ -962,7 +1107,7 @@ function getAIAnswer(question){
     question.toLowerCase();
 
 
-  /* 自習室 */
+  /* 自習室 / 座位 */
 
   if(
     q.includes("自習") ||
@@ -972,12 +1117,16 @@ function getAIAnswer(question){
   ){
 
     return `
+
       目前這個網站可以提供自習空間的相關資訊，
       但目前還沒有連接圖書館即時座位系統，
-      因此無法即時確認目前是否還有空位。<br><br>
+      因此無法即時確認目前是否還有空位。
+
+      <br><br>
 
       📖 如果你要使用自習空間，
       可以前往蘭潭圖書館的自修區查看現場座位狀況。
+
     `;
 
   }
@@ -993,11 +1142,15 @@ function getAIAnswer(question){
   ){
 
     return `
-      📚 你可以使用「館藏查詢」功能搜尋圖書館的書籍、
-      期刊與其他館藏資料。<br><br>
+
+      📚 你可以使用「館藏查詢」功能搜尋圖書館的
+      書籍、期刊與其他館藏資料。
+
+      <br><br>
 
       回到首頁後，點選「館藏與閱讀資源」，
       再選擇「館藏查詢」即可開始搜尋。
+
     `;
 
   }
@@ -1011,8 +1164,11 @@ function getAIAnswer(question){
   ){
 
     return `
-      📱 你可以從「館藏與閱讀資源」進入「電子書查詢」，
-      查看圖書館提供的電子書與電子資源。
+
+      📱 你可以從「館藏與閱讀資源」進入
+      「電子書查詢」，查看圖書館提供的電子書
+      與電子資源。
+
     `;
 
   }
@@ -1027,8 +1183,11 @@ function getAIAnswer(question){
   ){
 
     return `
-      🖨️ 嘉大蘭潭圖書館提供列印、影印與掃描等資訊服務，
-      可以協助你處理課程資料、報告與學習文件。
+
+      🖨️ 嘉大蘭潭圖書館提供列印、影印與掃描等
+      資訊服務，可以協助你處理課程資料、
+      報告與學習文件。
+
     `;
 
   }
@@ -1043,15 +1202,17 @@ function getAIAnswer(question){
   ){
 
     return `
+
       🎬 如果你想使用視聽團體室或會議室，
       可以從首頁的「視聽與會議設施」進入，
       查看相關資訊與預約服務。
+
     `;
 
   }
 
 
-  /* 電腦 */
+  /* 電腦 / 網路 */
 
   if(
     q.includes("電腦") ||
@@ -1060,8 +1221,10 @@ function getAIAnswer(question){
   ){
 
     return `
+
       💻 圖書館提供電腦與網路等資訊設備，
       可以用於資料查詢、學習與研究。
+
     `;
 
   }
@@ -1076,8 +1239,15 @@ function getAIAnswer(question){
   ){
 
     return `
-      🎨 蘭潭圖書館有藝文系列展、作品展及特色文物展覽。
-      你可以點選首頁的「藝文展覽功能」查看相關展覽資訊。
+
+      🎨 蘭潭圖書館有藝文系列展、作品展及
+      特色文物展覽。
+
+      <br><br>
+
+      你可以點選首頁的「藝文展覽功能」
+      查看相關展覽資訊。
+
     `;
 
   }
@@ -1092,9 +1262,12 @@ function getAIAnswer(question){
   ){
 
     return `
+
       🕐 關於圖書館目前的開放時間，
       建議以嘉義大學圖書館官方公告為準，
-      以免遇到寒暑假、國定假日或特殊活動而有所調整。
+      以免遇到寒暑假、國定假日或特殊活動
+      而有所調整。
+
     `;
 
   }
@@ -1103,70 +1276,92 @@ function getAIAnswer(question){
   /* 預設回答 */
 
   return `
-    🤔 這個問題我目前還沒有足夠的資訊可以回答。<br><br>
 
-    你可以試著問我：<br>
-    • 自習室還有位置嗎？<br>
-    • 我要去哪裡找書？<br>
-    • 圖書館可以列印嗎？<br>
-    • 電子書要去哪裡查？<br>
+    🤔 這個問題我目前還沒有足夠的資訊可以回答。
+
+    <br><br>
+
+    你可以試著問我：
+
+    <br>
+
+    • 自習室還有位置嗎？
+
+    <br>
+
+    • 我要去哪裡找書？
+
+    <br>
+
+    • 圖書館可以列印嗎？
+
+    <br>
+
+    • 電子書要去哪裡查？
+
+    <br>
+
     • 會議室怎麼預約？
+
   `;
 
 }
 
 
-/* =========================
+/* ==================================================
    防止使用者輸入 HTML
-========================= */
+================================================== */
 
 function escapeHTML(text){
 
   const div =
     document.createElement("div");
 
-  div.textContent = text;
+  div.textContent =
+    text;
 
   return div.innerHTML;
+
 }
 
 
-/* =========================
+/* ==================================================
    關閉視窗
-========================= */
+================================================== */
 
 function closeInfo(){
 
   document
     .getElementById("modal")
     .classList.remove("show");
+
 }
 
 
-/* =========================
+/* ==================================================
    鍵盤操作
-========================= */
+================================================== */
 
 document
-.querySelectorAll("#cards .card")
-.forEach(card => {
+  .querySelectorAll("#cards .card")
+  .forEach(card => {
 
-  card.addEventListener("keydown", event => {
+    card.addEventListener("keydown", event => {
 
-    if(
-      event.key === "Enter" ||
-      event.key === " "
-    ){
+      if(
+        event.key === "Enter" ||
+        event.key === " "
+      ){
 
-      event.preventDefault();
+        event.preventDefault();
 
-      card.click();
+        card.click();
 
-    }
+      }
+
+    });
 
   });
-
-});
 
 
 /* ESC 關閉 */
