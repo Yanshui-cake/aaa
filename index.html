@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>嘉義大學蘭潭圖書館｜服務指南</title>
 
 <style>
+
 :root{
   --navy:#17365d;
   --blue:#2d6cdf;
@@ -25,6 +27,7 @@ body{
   background:var(--light);
   color:var(--text);
 }
+
 
 /* =========================
    頁首
@@ -63,6 +66,7 @@ h1{
   line-height:1.15;
 }
 
+
 /* =========================
    主內容
 ========================= */
@@ -80,6 +84,7 @@ section{
   grid-template-columns:repeat(3,1fr);
   gap:16px;
 }
+
 
 /* =========================
    功能卡片
@@ -119,6 +124,7 @@ section{
   font-size:14px;
   line-height:1.7;
 }
+
 
 /* =========================
    彈出視窗
@@ -177,13 +183,13 @@ section{
 }
 
 .modal-text{
-  white-space:pre-line;
-  line-height:1.8;
+  line-height:1.9;
   color:var(--text);
 }
 
+
 /* =========================
-   選項按鈕
+   選項
 ========================= */
 
 .option{
@@ -216,6 +222,7 @@ section{
   color:var(--muted);
 }
 
+
 /* =========================
    功能開發中
 ========================= */
@@ -244,6 +251,7 @@ section{
   font-size:14px;
 }
 
+
 /* =========================
    AI 小幫手
 ========================= */
@@ -254,16 +262,19 @@ section{
 
 .ai-messages{
   background:#f5f8fc;
-  border:1px solid #e1e8f0;
-  border-radius:15px;
-  padding:15px;
-  height:300px;
+  border:1px solid #dce5ef;
+  border-radius:18px;
+  padding:18px;
+  
+  /* 放大 AI 對話框 */
+  height:420px;
+  
   overflow-y:auto;
-  margin-bottom:12px;
+  margin-bottom:14px;
 }
 
 .ai-message{
-  margin-bottom:12px;
+  margin-bottom:15px;
   display:flex;
 }
 
@@ -272,11 +283,11 @@ section{
 }
 
 .ai-bubble{
-  max-width:85%;
-  padding:11px 15px;
-  border-radius:15px;
-  line-height:1.6;
-  font-size:14px;
+  max-width:88%;
+  padding:13px 17px;
+  border-radius:17px;
+  line-height:1.7;
+  font-size:15px;
 }
 
 .ai-message.bot .ai-bubble{
@@ -290,15 +301,15 @@ section{
 
 .ai-input-area{
   display:flex;
-  gap:8px;
+  gap:10px;
 }
 
 .ai-input{
   flex:1;
   border:1px solid #d7e0ea;
   border-radius:12px;
-  padding:12px;
-  font-size:15px;
+  padding:14px;
+  font-size:16px;
   outline:none;
 }
 
@@ -311,7 +322,7 @@ section{
   background:#2d6cdf;
   color:white;
   border-radius:12px;
-  padding:0 18px;
+  padding:0 22px;
   cursor:pointer;
   font-size:15px;
   font-weight:700;
@@ -327,8 +338,54 @@ section{
   margin-top:10px;
 }
 
+
 /* =========================
-   RWD 手機版
+   頁尾
+========================= */
+
+footer{
+  background:#17365d;
+  color:white;
+  padding:35px 20px;
+}
+
+.footer-content{
+  max-width:1050px;
+  margin:auto;
+}
+
+.footer-title{
+  font-size:22px;
+  font-weight:800;
+  margin-bottom:18px;
+}
+
+.footer-info{
+  font-size:14px;
+  line-height:2;
+  color:#e8eef7;
+}
+
+.library-button{
+  display:inline-block;
+  margin-top:22px;
+  padding:12px 22px;
+  background:white;
+  color:#17365d;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:800;
+  transition:.2s;
+}
+
+.library-button:hover{
+  background:#e9f0ff;
+  transform:translateY(-2px);
+}
+
+
+/* =========================
+   RWD
 ========================= */
 
 @media(max-width:800px){
@@ -357,12 +414,25 @@ section{
     padding:25px 18px 35px;
   }
 
+  .modalbox{
+    padding:22px;
+  }
+
+  /* 手機 AI 對話框也放大 */
+  .ai-messages{
+    height:450px;
+  }
+
   .ai-input-area{
     flex-direction:column;
   }
 
   .ai-send{
-    padding:12px;
+    padding:13px;
+  }
+
+  .footer-info{
+    font-size:13px;
   }
 
 }
@@ -372,6 +442,7 @@ section{
 
 
 <body>
+
 
 <!-- =========================
      頁首
@@ -401,6 +472,7 @@ section{
   </div>
 
 </header>
+
 
 
 <!-- =========================
@@ -436,6 +508,7 @@ section{
   </div>
 
 
+
   <!-- 2 學習與自修空間 -->
 
   <div
@@ -456,6 +529,7 @@ section{
     </p>
 
   </div>
+
 
 
   <!-- 3 視聽與會議設施 -->
@@ -480,7 +554,8 @@ section{
   </div>
 
 
-  <!-- 4 藝文展覽功能 -->
+
+  <!-- 4 藝文展覽 -->
 
   <div
     class="card"
@@ -500,6 +575,7 @@ section{
     </p>
 
   </div>
+
 
 
   <!-- 5 資訊與技術支援 -->
@@ -524,7 +600,8 @@ section{
   </div>
 
 
-  <!-- 6 圖書館 AI 小幫手 -->
+
+  <!-- 6 AI 小幫手 -->
 
   <div
     class="card"
@@ -551,6 +628,7 @@ section{
 </section>
 
 </main>
+
 
 
 <!-- =========================
@@ -601,26 +679,59 @@ section{
 </div>
 
 
+
+<!-- =========================
+     頁尾
+========================= -->
+
+<footer>
+
+  <div class="footer-content">
+
+    <div class="footer-title">
+      📚 蘭潭圖書資訊處
+    </div>
+
+
+    <div class="footer-info">
+
+      600355 嘉義市鹿寮里學府路300號
+      <br>
+
+      TEL: 05-2717233（圖書諮詢）
+      <br>
+
+      TEL: 2717260~62（校務行政，輔助教學平台）
+      <br>
+
+      TEL: 05-2717259（網路，電子郵件）
+      <br>
+
+      TEL: 05-2717238（論文系統諮詢）
+      <br>
+
+      TEL: 05-2717258（資訊諮詢）
+
+    </div>
+
+
+    <a
+      class="library-button"
+      href="https://website.ncyu.edu.tw/lib/"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      🌐 前往嘉大圖書館首頁
+
+    </a>
+
+  </div>
+
+</footer>
+
+
+
 <script>
-
-/* ==================================================
-   一般資訊視窗
-================================================== */
-
-function openInfo(title, sub, text){
-
-  document.getElementById("modalTitle").textContent =
-    title;
-
-  document.getElementById("modalSub").textContent =
-    sub;
-
-  document.getElementById("modalText").textContent =
-    text;
-
-  document.getElementById("modal").classList.add("show");
-
-}
 
 
 /* ==================================================
@@ -649,7 +760,7 @@ function openCollection(){
       </div>
 
       <div class="option-text">
-        查詢嘉大蘭潭圖書館的實體館藏、書籍與期刊資料
+        查詢嘉大蘭潭圖書館的實體館藏、書籍與期刊資料。
       </div>
 
     </a>
@@ -666,7 +777,7 @@ function openCollection(){
       </div>
 
       <div class="option-text">
-        查詢圖書館提供的電子書與電子資源
+        查詢圖書館提供的電子書與電子資源。
       </div>
 
     </a>
@@ -677,6 +788,7 @@ function openCollection(){
   document.getElementById("modal").classList.add("show");
 
 }
+
 
 
 /* ==================================================
@@ -718,6 +830,7 @@ function openDeveloping(title){
 }
 
 
+
 /* ==================================================
    3. 視聽與會議設施
 ================================================== */
@@ -744,7 +857,7 @@ function openAudioMeeting(){
       </div>
 
       <div class="option-text">
-        查看視聽團體室及會議室相關資訊與預約服務
+        查看視聽團體室及會議室相關資訊與預約服務。
       </div>
 
     </a>
@@ -759,7 +872,7 @@ function openAudioMeeting(){
       </div>
 
       <div class="option-text">
-        查看圖書館館藏電影
+        查看圖書館館藏電影。
       </div>
 
     </div>
@@ -770,6 +883,7 @@ function openAudioMeeting(){
   document.getElementById("modal").classList.add("show");
 
 }
+
 
 
 /* ==================================================
@@ -798,7 +912,7 @@ function openArt(){
       </div>
 
       <div class="option-text">
-        查看嘉義大學藝文系列展相關資訊
+        查看嘉義大學藝文系列展相關資訊。
       </div>
 
     </a>
@@ -815,7 +929,7 @@ function openArt(){
       </div>
 
       <div class="option-text">
-        查看郭東榮作品展相關資訊
+        查看郭東榮作品展相關資訊。
       </div>
 
     </a>
@@ -832,7 +946,7 @@ function openArt(){
       </div>
 
       <div class="option-text">
-        進入蕭萬長文物館網站
+        進入蕭萬長文物館網站。
       </div>
 
     </a>
@@ -849,7 +963,7 @@ function openArt(){
       </div>
 
       <div class="option-text">
-        查看混沌&圓成展覽相關資料
+        查看混沌&圓成展覽相關資料。
       </div>
 
     </a>
@@ -860,6 +974,7 @@ function openArt(){
   document.getElementById("modal").classList.add("show");
 
 }
+
 
 
 /* ==================================================
@@ -877,20 +992,20 @@ function openInformationServices(){
 
   document.getElementById("modalText").innerHTML = `
 
-    嘉大蘭潭圖書館提供多項資訊服務，協助學生進行
-    課程學習、資料查詢與研究。
+    嘉大蘭潭圖書館提供多項資訊服務，
+    協助學生進行課程學習、資料查詢與研究。
 
     <br><br>
 
     🌐 <strong>網路與電腦服務</strong><br>
-    館內提供網路及電腦設備，方便學生進行資料查詢、
-    網路學習與研究工作。
+    館內提供網路及電腦設備，
+    方便學生進行資料查詢、網路學習與研究工作。
 
     <br><br>
 
     🔎 <strong>館藏與資料檢索</strong><br>
     可以使用館藏查詢系統搜尋書籍、期刊及其他館藏資料，
-    快速找到需要的學習資源。
+    協助快速找到需要的學習資源。
 
     <br><br>
 
@@ -907,8 +1022,10 @@ function openInformationServices(){
     <br><br>
 
     👩‍🏫 <strong>館員資訊服務</strong><br>
-    如果不知道如何尋找特定資料或使用圖書館資源，
-    可以向館員尋求協助，取得相關的資源與檢索指引。
+    如果不知道如何尋找特定資料，
+    或不清楚如何使用圖書館資源，
+    可以向館員尋求協助，
+    取得相關資源與檢索指引。
 
   `;
 
@@ -916,6 +1033,7 @@ function openInformationServices(){
   document.getElementById("modal").classList.add("show");
 
 }
+
 
 
 /* ==================================================
@@ -946,15 +1064,27 @@ function openAI(){
 
           <div class="ai-bubble">
 
-            👋 你好！我是蘭潭圖書館 AI 小幫手。<br><br>
+            👋 你好！我是蘭潭圖書館 AI 小幫手。
 
-            你可以問我圖書館相關問題，例如：<br>
+            <br><br>
 
-            「自習室還有位置嗎？」<br>
+            你可以問我圖書館相關問題，例如：
 
-            「我要去哪裡找書？」<br>
+            <br>
+
+            「自習室還有位置嗎？」
+
+            <br>
+
+            「我要去哪裡找書？」
+
+            <br>
 
             「圖書館可以列印嗎？」
+
+            <br>
+
+            「會議室怎麼預約？」
 
           </div>
 
@@ -1011,6 +1141,7 @@ function openAI(){
 }
 
 
+
 /* ==================================================
    AI 問答
 ================================================== */
@@ -1048,7 +1179,9 @@ function askAI(){
   userMessage.innerHTML = `
 
     <div class="ai-bubble">
+
       ${escapeHTML(question)}
+
     </div>
 
   `;
@@ -1057,13 +1190,11 @@ function askAI(){
   messages.appendChild(userMessage);
 
 
-  /* 取得 AI 回答 */
+  /* AI 回答 */
 
   const answer =
     getAIAnswer(question);
 
-
-  /* 顯示 AI */
 
   const botMessage =
     document.createElement("div");
@@ -1075,7 +1206,9 @@ function askAI(){
   botMessage.innerHTML = `
 
     <div class="ai-bubble">
+
       🤖 ${answer}
+
     </div>
 
   `;
@@ -1084,17 +1217,14 @@ function askAI(){
   messages.appendChild(botMessage);
 
 
-  /* 清空輸入框 */
-
   input.value = "";
 
-
-  /* 自動捲到底部 */
 
   messages.scrollTop =
     messages.scrollHeight;
 
 }
+
 
 
 /* ==================================================
@@ -1107,7 +1237,7 @@ function getAIAnswer(question){
     question.toLowerCase();
 
 
-  /* 自習室 / 座位 */
+  /* 自習室 */
 
   if(
     q.includes("自習") ||
@@ -1143,12 +1273,13 @@ function getAIAnswer(question){
 
     return `
 
-      📚 你可以使用「館藏查詢」功能搜尋圖書館的
-      書籍、期刊與其他館藏資料。
+      📚 你可以使用「館藏查詢」功能，
+      搜尋圖書館的書籍、期刊與其他館藏資料。
 
       <br><br>
 
-      回到首頁後，點選「館藏與閱讀資源」，
+      回到首頁後，
+      點選「館藏與閱讀資源」，
       再選擇「館藏查詢」即可開始搜尋。
 
     `;
@@ -1166,8 +1297,8 @@ function getAIAnswer(question){
     return `
 
       📱 你可以從「館藏與閱讀資源」進入
-      「電子書查詢」，查看圖書館提供的電子書
-      與電子資源。
+      「電子書查詢」，
+      查看圖書館提供的電子書與電子資源。
 
     `;
 
@@ -1240,13 +1371,13 @@ function getAIAnswer(question){
 
     return `
 
-      🎨 蘭潭圖書館有藝文系列展、作品展及
-      特色文物展覽。
+      🎨 蘭潭圖書館有藝文系列展、
+      作品展及特色文物展覽。
 
       <br><br>
 
-      你可以點選首頁的「藝文展覽功能」
-      查看相關展覽資訊。
+      你可以點選首頁的
+      「藝文展覽功能」查看相關展覽資訊。
 
     `;
 
@@ -1308,6 +1439,7 @@ function getAIAnswer(question){
 }
 
 
+
 /* ==================================================
    防止使用者輸入 HTML
 ================================================== */
@@ -1325,6 +1457,7 @@ function escapeHTML(text){
 }
 
 
+
 /* ==================================================
    關閉視窗
 ================================================== */
@@ -1336,6 +1469,7 @@ function closeInfo(){
     .classList.remove("show");
 
 }
+
 
 
 /* ==================================================
@@ -1364,6 +1498,7 @@ document
   });
 
 
+
 /* ESC 關閉 */
 
 document.addEventListener(
@@ -1380,6 +1515,7 @@ document.addEventListener(
 );
 
 </script>
+
 
 </body>
 </html>
